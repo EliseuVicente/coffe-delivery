@@ -16,6 +16,8 @@ export const Navbar = styled.header`
     right: 0px;
     top: 0px;
 
+    background: #FAFAFA;
+
     img{ 
     width: 84.95px;
     height: 40px;
@@ -28,7 +30,6 @@ export const Navbar = styled.header`
     }
 
 `
-
 export const Action = styled.div`
 
     display: flex;

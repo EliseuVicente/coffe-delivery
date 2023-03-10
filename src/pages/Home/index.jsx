@@ -12,7 +12,7 @@ export function Home(){
                 <img src='.\src\assets\logo.svg'/>
 
                 <Action>
-                   <span><MapPin size={23} color="#4B2995" />Campinas, SP</span>
+                   <span><MapPin size={23} color="#4B2995" background="#EBE5F9" />Campinas, SP</span>
                 </Action>
             </Navbar>
         </div>
