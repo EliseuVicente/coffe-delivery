@@ -32,14 +32,14 @@ export const Navbar = styled.header`
 `
 export const Action = styled.div`
 
-    display: flex;
+    display: flexbox;
     flex-direction: row;
-    justify-content: center;
+    
     align-items: center;
-    padding: 8px;
-    gap: 4px;
+    padding: 0rem;
+    gap: 0.3rem;
 
-    width: 143px;
+    width: 133px;
     height: 38px;
 
     /* Brand/Purple Light */
@@ -53,13 +53,9 @@ export const Action = styled.div`
     order: 0;
     flex-grow: 0;
 
-    span{
-        
-    width: 101px;
-    height: 18px;
-
+    div{
     /* Text/Regular S */
-
+    
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -67,16 +63,52 @@ export const Action = styled.div`
     line-height: 130%;
     /* or 18px */
 
-
     /* Brand/Purple Dark */
 
     color: #4B2995;
     background: #EBE5F9;
+
+    }
+    `
+export const IconCar = styled.span`
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    margin-left: 2rem;
+
+    width: 38px;
+    height: 38px;
+
+    /* Brand/Yellow Light */
+
+    background: #F1E9C9;
+    border-radius: 6px;
 
     /* Inside auto layout */
 
     flex: none;
     order: 1;
     flex-grow: 0;
+`
+
+export const Header = styled.div`
+    position: absolute;
+    height: 544px;
+    left: 0px;
+    right: 0px;
+    top: 104px;
+
+    background: #FAFAFA;
+
+    img{
+        position: absolute;
+        width: 476px;
+        height: 360px;
+        left: calc(50% - 476px/2 + 322px);
+        top: calc(50% - 360px/2);
+
     }
-    `
+`
