@@ -1,5 +1,5 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
-import { Action, Header, IconCar, Navbar } from "./styles";
+import { Action, BoxCircle, CircleGray, CirclePurple, CircleYellow, CircleYellowDark, Header, IconCar, Navbar, TitleCircleGray, TitleCirclePurple, TitleCircleYellow, TitleCircleYellowDark } from "./styles";
 
 
 
@@ -22,8 +22,25 @@ export function Home(){
                 
             <Header>
                 <img src='.\src\assets\intro.svg'/>
+
+                <BoxCircle>
+
                 
+                    <CircleYellowDark> </CircleYellowDark>
+                        <TitleCircleYellowDark><p>Compra simples e segura</p></TitleCircleYellowDark>
+
+                    <CircleGray>  </CircleGray>
+                        <TitleCircleGray><p>Embalagem mantém o café intacto</p></TitleCircleGray>
+
+                    <CircleYellow></CircleYellow>
+                        <TitleCircleYellow><p>Entrega rápida e rastreada</p></TitleCircleYellow>
+
+                    <CirclePurple></CirclePurple>
+                        <TitleCirclePurple><p>O café chega fresquinho até você</p></TitleCirclePurple>
+                </BoxCircle>
             </Header>
+            
+            
         </div>
 
         
