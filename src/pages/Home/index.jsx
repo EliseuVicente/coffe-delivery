@@ -1,5 +1,6 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
 import { Action, BoxCircle, CircleGray, CirclePurple, CircleYellow, CircleYellowDark, Header, IconCar, Navbar, TitleCircleGray, TitleCirclePurple, TitleCircleYellow, TitleCircleYellowDark } from "./styles";
+import { Products } from "./components/products"
 
 
 
@@ -40,7 +41,7 @@ export function Home(){
                 </BoxCircle>
             </Header>
             
-            
+            <Products />
         </div>
 
         
