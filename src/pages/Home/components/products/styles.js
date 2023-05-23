@@ -1,3 +1,5 @@
+import styled from 'styled-components'
+
 export const ContainerProducts = styled.div`
 position: absolute;
 height: 1645px;

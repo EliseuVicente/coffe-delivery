@@ -6,26 +6,8 @@ export const Navbar = styled.header`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 32px 160px;
-    gap: 820px;
-
-    position: absolute;
-    height: 104px;
-    left: 0px;
-    right: 0px;
-    top: 0px;
-
-    background: #FAFAFA;
-
-    img{ 
-    width: 84.95px;
-    height: 40px;
-
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    }
+    padding: 2rem 7rem;
+    gap: 2rem;
 `
 export const Action = styled.div`
 
@@ -33,14 +15,14 @@ export const Action = styled.div`
     flex-direction: row;
     justify-content: flex-end;
     align-items: center;
-    padding: 0rem;
-    gap: 5px;
+    padding-left: 0.5rem;
+    gap: .31rem;
 
-    width: 143px;
-    height: 38px;
+    width: 8.938rem;
+    height: 2.375rem;
 
     /* Brand/Purple Light */
-    background: #EBE5F9;
+    background: ${props => props.theme['purple-light']};
     border-radius: 6px;
     /* Inside auto layout */
 
@@ -51,11 +33,9 @@ export const Action = styled.div`
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
-    /* or 18px */
-
     /* Brand/Purple Dark */
-    color: #4B2995;
-    background: #EBE5F9;
+    color: ${props => props.theme['purple-dark']};
+ 
     }
 `
 export const IconCar = styled.span`
@@ -64,14 +44,11 @@ export const IconCar = styled.span`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-   
     margin-left: 2rem;
-    margin-top: -0.1rem;
-    width: 38px;
-    height: 38px;
-
+    width: 2.375rem;
+    height: 2.375rem;
     /* Brand/Yellow Light */
-    background: #F1E9C9;
+    background: ${props => props.theme['yellow-light']};
     border-radius: 6px;
 `
 export const Header = styled.div`
@@ -80,8 +57,6 @@ export const Header = styled.div`
     left: 0px;
     right: 0px;
     top: 104px;
-
-    background: #FAFAFA;
 
     img{
         position: absolute;
@@ -92,12 +67,14 @@ export const Header = styled.div`
     }
 `
 export const BoxCircle = styled.div`
-    position: absolute;
-    width: 567px;
-    height: 84px;
-    left: calc(50% - 567px/2 - 276.5px);
-    top: calc(50% - 84px/2 + 122px);
-
+    /* display: inline-grid;
+    position: relative; */
+    /* grid-template-rows: auto 2fr; */
+    /* height: 5.25rem; */
+    padding-left: 2rem;
+    /* left: calc(50% - 567px/2 - 276.5px);
+    top: calc(50% - 84px/2 + 122px); */
+    max-width: 34rem;
     p {
         font-family: 'Roboto';
         font-style: normal;
@@ -109,52 +86,57 @@ export const BoxCircle = styled.div`
     }
 `
 export const BaseCircleItem = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 8px;
-    gap: 8px;
+    display: inline-grid;
+    /* flex-direction: row; */
+    grid-template-rows: auto 2fr;
+    /* justify-content: center;
+    align-items: center; */
+    /* padding: 8px;
+    gap: 8px; */
 
-    width: 32px;
-    height: 32px;
+    width: 2rem;
+    height: 2rem;
 
     border-radius: 1000px;
 `
 export const CircleYellowDark = styled(BaseCircleItem)`
-    margin-top: 0px;
+    /* margin-top: 0px; */
     background: #C47F17;
 `
 export const TitleCircleYellowDark = styled.div`
-    margin-top: -25px;
-    margin-left: 45px; 
+    display:inline-flex;
+    /* margin-top: -25px;
+    margin-left: 45px;  */
 `
 export const CircleGray = styled(BaseCircleItem)`
-    margin-top: -26px;
-    margin-left: 271px;
+    /* margin-top: -26px;
+    margin-left: 271px; */
     background: #574F4D; 
 `
 export const TitleCircleGray = styled.div`
-    margin-top: -26px;
+   display:inline-flex;
+   /* margin-top: -26px;
     margin-left: 320px;
     width: 250px;
-    height: 21px;
+    height: 21px; */
 `
 export const CircleYellow = styled(BaseCircleItem)`
-    margin-top: 20px;
-    margin-left: 0px;
+    /* margin-top: 20px;
+    margin-left: 0px; */
     background: #DBAC2C; 
 `
 export const TitleCircleYellow = styled.div`
-    margin-top: -26px;
-    margin-left: 45px;
+    display:inline-flex;
+    /* margin-top: -26px;
+    margin-left: 45px; */
 `
 export const CirclePurple = styled(BaseCircleItem)`
-    margin-top: -26px;
-    margin-left: 272px;
+    /* margin-top: -26px;
+    margin-left: 272px; */
     background: #8047F8; 
 `
 export const TitleCirclePurple = styled.div`
-    margin-top: -26px;
-    margin-left: 320px;
+    display:inline-flex;
+    /* margin-top: -26px;
+    margin-left: 320px; */
 `

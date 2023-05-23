@@ -7,13 +7,12 @@ import { Products } from "./components/products"
 export function Home(){
 
     return (
-        
-        <div>
+       
+         <div>
             <Navbar>
                 <img src='.\src\assets\logo.svg'/>
-
                 <Action>
-                   <MapPin size={23} color="#4B2995" weight="fill" />
+                   <MapPin size={23} color= "#4B2995"weight="fill" />
                    <div> Campinas, SP</div>
                    <IconCar>
                     <ShoppingCart size={23} color="#C47F17" weight="fill"/>
@@ -22,11 +21,9 @@ export function Home(){
             </Navbar>
                 
             <Header>
-                <img src='.\src\assets\intro.svg'/>
+                {/* <img src='.\src\assets\intro.svg'/> */}
 
                 <BoxCircle>
-
-                
                     <CircleYellowDark> </CircleYellowDark>
                         <TitleCircleYellowDark><p>Compra simples e segura</p></TitleCircleYellowDark>
 
