@@ -1,5 +1,5 @@
-import { MapPin, ShoppingCart } from "phosphor-react";
-import { Action, BoxCircle, CircleGray, CirclePurple, CircleYellow, Header, IconCar, Navbar} from "./styles";
+import { Coffee, MapPin, Package, ShoppingCart, Timer } from "phosphor-react";
+import { Action, BoxCircle, CicleYellowDark, CircleGray, CirclePurple, CircleYellow, Header, IconCar, LabelItems, Navbar, SubTitle, Title, TitleHeader} from "./styles";
 import { Products } from "./components/products"
 
 
@@ -21,21 +21,43 @@ export function Home(){
             </Navbar>
                 
             <Header>
-                {/* <img src='.\src\assets\intro.svg'/> */}
+                <img src='.\src\assets\intro.svg'/>
 
-                {/* <BoxCircle> */}
-                    {/* <LabelYellowDark> <span>Compra simples e segura</span></LabelYellowDark> */}
-                        {/* <TitleCircleYellowDark><p>Compra simples e segura</p></TitleCircleYellowDark> */}
+                <TitleHeader>
+                    <Title>Encontre o café perfeito para qualquer hora do dia</Title>
+                    <SubTitle>Com o Coffee Delivery você recebe seu café onde estiver, a qualquer hora</SubTitle>
+                </TitleHeader>
 
-                    {/* <CircleGray><span>Embalagem mantém o café intacto</span></CircleGray> */}
-                        {/* <TitleCircleGray><p>Embalagem mantém o café intacto</p></TitleCircleGray> */}
-
-                    {/* <CircleYellow><span>Entrega rápida e rastreada</span></CircleYellow> */}
-                        {/* <TitleCircleYellow><p>Entrega rápida e rastreada</p></TitleCircleYellow> */}
-
-                    {/* <CirclePurple><span>O café chega fresquinho até você</span></CirclePurple> */}
-                        {/* <TitleCirclePurple><p>O café chega fresquinho até você</p></TitleCirclePurple> */}
-                {/* </BoxCircle> */}
+                <BoxCircle>
+                    <LabelItems>
+                        <CicleYellowDark>
+                            <ShoppingCart size={17} color="white" weight="fill"/>
+                        </CicleYellowDark>
+                        <span>Compra simples e segura</span>
+                    </LabelItems>
+                        
+                    <LabelItems>
+                        <CircleGray>
+                            <Package size={17} color="white" weight="fill"/>
+                        </CircleGray>
+                        <span>Embalagem mantém o café intacto</span>
+                    </LabelItems>
+                        
+                    <LabelItems>
+                        <CircleYellow>
+                            <Timer size={17} color="white" weight="fill"/>
+                        </CircleYellow>
+                        <span>Entrega rápida e rastreada</span>
+                    </LabelItems>
+                        
+                    <LabelItems>
+                        <CirclePurple>
+                            <Coffee size={17} color="white" weight="fill"/>
+                        </CirclePurple>
+                        <span>O café chega fresquinho até você</span>
+                    </LabelItems>
+                        
+                </BoxCircle>
             </Header>
             
             <Products />
