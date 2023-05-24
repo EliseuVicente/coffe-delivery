@@ -1,5 +1,5 @@
 import { MapPin, ShoppingCart } from "phosphor-react";
-import { Action, BoxCircle, CircleGray, CirclePurple, CircleYellow, CircleYellowDark, Header, IconCar, Navbar, TitleCircleGray, TitleCirclePurple, TitleCircleYellow, TitleCircleYellowDark } from "./styles";
+import { Action, BoxCircle, CircleGray, CirclePurple, CircleYellow, Header, IconCar, Navbar} from "./styles";
 import { Products } from "./components/products"
 
 
@@ -23,19 +23,19 @@ export function Home(){
             <Header>
                 {/* <img src='.\src\assets\intro.svg'/> */}
 
-                <BoxCircle>
-                    <CircleYellowDark> </CircleYellowDark>
-                        <TitleCircleYellowDark><p>Compra simples e segura</p></TitleCircleYellowDark>
+                {/* <BoxCircle> */}
+                    {/* <LabelYellowDark> <span>Compra simples e segura</span></LabelYellowDark> */}
+                        {/* <TitleCircleYellowDark><p>Compra simples e segura</p></TitleCircleYellowDark> */}
 
-                    <CircleGray>  </CircleGray>
-                        <TitleCircleGray><p>Embalagem mantém o café intacto</p></TitleCircleGray>
+                    {/* <CircleGray><span>Embalagem mantém o café intacto</span></CircleGray> */}
+                        {/* <TitleCircleGray><p>Embalagem mantém o café intacto</p></TitleCircleGray> */}
 
-                    <CircleYellow></CircleYellow>
-                        <TitleCircleYellow><p>Entrega rápida e rastreada</p></TitleCircleYellow>
+                    {/* <CircleYellow><span>Entrega rápida e rastreada</span></CircleYellow> */}
+                        {/* <TitleCircleYellow><p>Entrega rápida e rastreada</p></TitleCircleYellow> */}
 
-                    <CirclePurple></CirclePurple>
-                        <TitleCirclePurple><p>O café chega fresquinho até você</p></TitleCirclePurple>
-                </BoxCircle>
+                    {/* <CirclePurple><span>O café chega fresquinho até você</span></CirclePurple> */}
+                        {/* <TitleCirclePurple><p>O café chega fresquinho até você</p></TitleCirclePurple> */}
+                {/* </BoxCircle> */}
             </Header>
             
             <Products />

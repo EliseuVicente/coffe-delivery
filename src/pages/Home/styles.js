@@ -66,77 +66,80 @@ export const Header = styled.div`
         top: calc(50% - 360px/2);
     }
 `
-export const BoxCircle = styled.div`
-    /* display: inline-grid;
-    position: relative; */
-    /* grid-template-rows: auto 2fr; */
-    /* height: 5.25rem; */
-    padding-left: 2rem;
-    /* left: calc(50% - 567px/2 - 276.5px);
-    top: calc(50% - 84px/2 + 122px); */
-    max-width: 34rem;
-    p {
-        font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 130%;
+// export const BoxCircle = styled.div`
+//     // position: relative;
+//     // width: 35.438rem;
+//     // height: 5.25rem;
+//     // left: calc(50% - 567px/2 - 276.5px);
+//     // top: calc(50% - 84px/2 + 122px);
+// `
+// export const BaseLabelItem = styled.div`
+//         display: flex;
+//         flex-direction: row;
+//         align-items: center;
+//         padding: 0px;
+//         gap: 12px;
 
-        color: #574F4D;
-    }
-`
-export const BaseCircleItem = styled.div`
-    display: inline-grid;
-    /* flex-direction: row; */
-    grid-template-rows: auto 2fr;
-    /* justify-content: center;
-    align-items: center; */
-    /* padding: 8px;
-    gap: 8px; */
-
-    width: 2rem;
-    height: 2rem;
-
-    border-radius: 1000px;
-`
-export const CircleYellowDark = styled(BaseCircleItem)`
-    /* margin-top: 0px; */
-    background: #C47F17;
-`
-export const TitleCircleYellowDark = styled.div`
-    display:inline-flex;
-    /* margin-top: -25px;
-    margin-left: 45px;  */
-`
-export const CircleGray = styled(BaseCircleItem)`
-    /* margin-top: -26px;
-    margin-left: 271px; */
-    background: #574F4D; 
-`
-export const TitleCircleGray = styled.div`
-   display:inline-flex;
-   /* margin-top: -26px;
-    margin-left: 320px;
-    width: 250px;
-    height: 21px; */
-`
-export const CircleYellow = styled(BaseCircleItem)`
-    /* margin-top: 20px;
-    margin-left: 0px; */
-    background: #DBAC2C; 
-`
-export const TitleCircleYellow = styled.div`
-    display:inline-flex;
-    /* margin-top: -26px;
-    margin-left: 45px; */
-`
-export const CirclePurple = styled(BaseCircleItem)`
-    /* margin-top: -26px;
-    margin-left: 272px; */
-    background: #8047F8; 
-`
-export const TitleCirclePurple = styled.div`
-    display:inline-flex;
-    /* margin-top: -26px;
-    margin-left: 320px; */
-`
+//     span{
+//             font-family: 'Roboto';
+//             font-style: normal;
+//             font-weight: 400;
+//             font-size: 16px;
+//             line-height: 130%;
+//             padding-left: 3rem;
+//             padding-top: 0.5rem; 
+//             color: #574F4D;
+//             width: 20rem;
+//     }
+// `
+// export const LabelYellowDark = styled(BaseLabelItem)`
+//     width: 231px;
+//     height: 32px;
+//     left: 0px;
+//     top: 0px;
+// `
+// export const TitleCircleYellowDark = styled.div`
+//     // display: grid;    
+//     margin-top:  -1.7rem;
+//     margin-left: 2.3rem;
+//     /* margin-top: -55rem;
+//      margin-left: 45px;  */
+// `
+// export const CircleGray = styled(BaseCircleItem)`
+//     /* margin-top: -26px;
+//     margin-left: 271px; */
+//     background: #574F4D; 
+// `
+// export const TitleCircleGray = styled.div`
+//     // display: grid;    
+//     margin-top:  -1.7rem;
+//     margin-left: 2.3rem;
+//    /* margin-top: -26px;
+//     margin-left: 320px;
+//     width: 250px;
+//     height: 21px; */
+// `
+// export const CircleYellow = styled(BaseCircleItem)`
+//     /* margin-top: 20px;
+//     margin-left: 0px; */
+//     background: #DBAC2C; 
+// `
+// export const TitleCircleYellow = styled.div`
+//     // display: grid;    
+//     margin-top:  -1.7rem;
+//     margin-left: 2.3rem;
+//     /* margin-top: -26px;
+//     margin-left: 45px; */
+// `
+// export const CirclePurple = styled(BaseCircleItem)`
+//     /* margin-top: -26px;
+//     margin-left: 272px; */
+//     background: #8047F8; 
+// `
+// export const TitleCirclePurple = styled.div`
+//     // display: grid;    
+//     margin-top:  -1.7rem;
+//     margin-left: 2.3rem;
+//     /* margin-top: -26px;
+//     margin-left: 320px; */
+// `
