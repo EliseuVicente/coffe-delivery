@@ -5,62 +5,75 @@ const coffees = [
     {
         id: 1,
         product: 'Expresso Tradicional',
-        // Valor: 9.90,
+        valor: 9.90,
         // img: 
         // quantidade: 
         // selecionado:
     },
     {
         id: 2,
-        product: 'Expresso Americano'
+        product: 'Expresso Americano',
+        valor: 9.90,
     },
     {
         id: 3,
-        product: 'Expresso Americano'
+        product: 'Expresso Cremoso',
+        valor: 9.90,
     },
     {
         id: 4,
-        product: 'Expresso Americano'
+        product: 'Expresso Gelado',
+        valor: 9.90,
     },
     {
         id: 5,
-        product: 'Expresso Americano'
+        product: 'Café com Leite',
+        valor: 9.90,
     },
     {
         id: 6,
-        product: 'Expresso Americano'
+        product: 'Latte',
+        valor: 9.90,
     },
     {
         id: 7,
-        product: 'Expresso Americano'
+        product: 'Capuccino',
+        valor: 9.90,
     },
     {
         id: 8,
-        product: 'Expresso Americano'
+        product: 'Macchiato',
+        valor: 9.90,
     },
     {
         id: 9,
-        product: 'Expresso Americano'
+        product: 'Mocaccino',
+        valor: 9.90,
     },
     {
         id: 10,
-        product: 'Expresso Americano'
+        product: 'Chocolate Quente',
+        valor: 9.90,
     },
     {
         id: 11,
-        product: 'Expresso Americano'
+        product: 'Cubano',
+        valor: 9.90,
     },
     {
         id: 12,
-        product: 'Expresso Americano'
+        product: 'Havaiano',
+        valor: 9.90,
     },
     {
         id: 13,
-        product: 'Expresso Americano'
+        product: 'Árabe',
+        valor: 9.90,
     },
     {
         id: 14,
-        product: 'Expresso Americano'
+        product: 'Irlandês',
+        valor: 9.90,
     },
     
 ]
@@ -78,6 +91,7 @@ export function Products(){
                             <ListProducts
                                 key={coffee.id}
                                 content={coffee.product}
+                                valor={coffee.valor}
                             />
                             
                       
