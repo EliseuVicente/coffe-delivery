@@ -5,75 +5,109 @@ const coffees = [
     {
         id: 1,
         product: 'Expresso Tradicional',
-        valor: 9.90,
-        // img: 
+        category: 'Tradicional',
+        valor: '9,90',
+        image: 'public/tradicional.svg',
         // quantidade: 
         // selecionado:
     },
     {
         id: 2,
         product: 'Expresso Americano',
-        valor: 9.90,
+        category: 'Tradicional',
+        valor: '9,90',
+        image: 'public/americano.svg',
     },
     {
         id: 3,
         product: 'Expresso Cremoso',
-        valor: 9.90,
+        category: 'Tradicional',
+        valor: '9,90',
+        image: 'public/cremoso.svg',
     },
     {
         id: 4,
         product: 'Expresso Gelado',
-        valor: 9.90,
+        category: 'Tradicional',
+        sub_category: 'Gelado',
+        valor: '9,90',
+        image: 'public/gelado.svg',
     },
     {
         id: 5,
         product: 'Café com Leite',
-        valor: 9.90,
+        category: 'Tradicional',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/cafecomleite.svg',
     },
     {
         id: 6,
         product: 'Latte',
-        valor: 9.90,
+        category: 'Tradicional',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/latte.svg',
     },
     {
         id: 7,
         product: 'Capuccino',
-        valor: 9.90,
+        category: 'Tradicional',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/capuccino.svg',
     },
     {
         id: 8,
         product: 'Macchiato',
-        valor: 9.90,
+        category: 'Tradicional',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/macchiato.svg',
     },
     {
         id: 9,
         product: 'Mocaccino',
-        valor: 9.90,
+        category: 'Tradicional',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/mocaccino.svg',
     },
     {
         id: 10,
         product: 'Chocolate Quente',
-        valor: 9.90,
+        category: 'Especial',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/chocolatequente.svg',
     },
     {
         id: 11,
-        product: 'Cubano',
-        valor: 9.90,
+        product: 'Especial',
+        category: 'Alcoólico',
+        sub_category: 'Com leite',
+        valor: '9,90',
+        image: 'public/cubano.svg',
     },
     {
         id: 12,
         product: 'Havaiano',
-        valor: 9.90,
+        product: 'Especial',
+        category: '',
+        valor: '9,90',
+        image: 'public/havaiano.svg',
     },
     {
         id: 13,
         product: 'Árabe',
-        valor: 9.90,
+        valor: '9,90',
+        image: 'public/arabe.svg',
     },
     {
         id: 14,
         product: 'Irlandês',
-        valor: 9.90,
+        valor: '9,90',
+        image: 'public/irlandes.svg',
     },
     
 ]
@@ -92,6 +126,9 @@ export function Products(){
                                 key={coffee.id}
                                 content={coffee.product}
                                 valor={coffee.valor}
+                                image={coffee.image}
+                                category={coffee.category}
+                                subcategory={coffee.sub_category}
                             />
                             
                       

@@ -38,14 +38,14 @@ export const CoffeeItems = styled.div`
     position: relative;
     margin-right: 1rem;
     background: ${props => props.theme['base-card']};
-    
+
     border-radius: 6px 36px;
 `
 
 export const NameCoffes = styled.h2`
     text-align: center;
     height: 1.625rem;
-    margin-top: 9.313rem;
+    margin-top: 1rem;
 
     font-family: 'Baloo 2';
     font-style: normal;
@@ -54,4 +54,57 @@ export const NameCoffes = styled.h2`
     line-height: 130%;
 
     color: ${props => props.theme['base-subtitle']};
+`
+
+export const ImageProducts = styled.img`
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    left: calc(50% - 120px/2);
+    top: -20px; 
+`
+export const PriceProducts = styled.div`
+    display: flex;
+    font-family: 'Roboto';
+    font-style: normal;
+    /* line-height: 130%; */
+    padding-left: 1rem;
+    color: #574F4D;
+
+    h1{
+        line-height: 3.5rem;
+        font-weight: 400;
+        font-size: 14px;
+        padding-right: .2rem ;
+    }
+    span{
+        font-family: 'Baloo 2';
+        font-size: 30px;
+    }
+`
+export const Categories = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /* align-items: center;
+    padding: 4px 8px;
+
+    width: 81px;
+    height: 21px;
+
+    margin-top:7rem;
+
+    background: #F1E9C9;
+    border-radius: 100px; */
+`
+
+export const CategoriesName  = styled.p`
+    font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+        line-height: 130%;
+        /* identical to box height, or 13px */
+        text-transform: uppercase;
+        color: #C47F17;
 `
