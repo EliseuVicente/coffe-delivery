@@ -1,11 +1,20 @@
-import { CoffeeItems, NameCoffes } from "./styles"
+import { Categories, CategoriesName, CoffeeItems, ImageProducts, NameCoffes, PriceProducts } from "./styles"
 
-export function ListProducts({content,valor}) {
+export function ListProducts({content,valor,image,category,subcategory}) {
     return (
     
             <CoffeeItems> 
+                <ImageProducts src={image}/>
+                <Categories>
+                    <CategoriesName>{category}</CategoriesName>
+                    
+                </Categories>
+               {subcategory}
                 <NameCoffes>{content}</NameCoffes>
-                <h1>R${valor}</h1>
+                <PriceProducts>
+                    <h1>R$</h1> <span>{valor}</span>
+                 </PriceProducts>
+                
             </CoffeeItems>
 
     )
