@@ -1,92 +1,13 @@
-import { CoffeeItems, CoffeeList, ContainerProducts, NameCoffes, Title } from "./styles"
-import { ListProducts } from "./listProducts"
+import { CoffeeItems, NameCoffes } from "./styles"
 
-const coffees = [
-    {
-        id: 1,
-        product: 'Expresso Tradicional',
-        // Valor: 9.90,
-        // img: 
-        // quantidade: 
-        // selecionado:
-    },
-    {
-        id: 2,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 3,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 4,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 5,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 6,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 7,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 8,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 9,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 10,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 11,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 12,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 13,
-        product: 'Expresso Americano'
-    },
-    {
-        id: 14,
-        product: 'Expresso Americano'
-    },
-    
-]
-
-export function Products(){
+export function ListProducts({content}) {
     return (
-        <ContainerProducts>
-            <Title>Nossos Cafés</Title>
+    
+            <CoffeeItems> 
+                <NameCoffes>{content}</NameCoffes>
+            </CoffeeItems>
 
-            <CoffeeList>
-
-            {coffees.map((coffee)=>{
-                    return (
-                            
-                            <ListProducts
-                                key={coffee.id}
-                                content={coffee.product}
-                            />
-                            
-                      
-                    )
-                })}
-                </CoffeeList>
-        </ContainerProducts>
-
-        /* <CoffeeItems>
+            /*                 <CoffeeItems> 
                         <NameCoffes>Expresso Tradicional</NameCoffes>
                     </CoffeeItems>
 
@@ -143,7 +64,5 @@ export function Products(){
                     </CoffeeItems>
                 </CoffeeList> */
     )
-}
+    }        
 
-
-    

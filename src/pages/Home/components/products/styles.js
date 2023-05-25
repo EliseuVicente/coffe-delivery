@@ -8,8 +8,8 @@ export const ContainerProducts = styled.div`
 `
 
 export const Title = styled.h1`
-    display: flex;
-    position: relative;
+    display: block;
+    position: absolute;
     width: 25rem;
     height: 2.625rem;
     left: 10%;
@@ -24,22 +24,34 @@ export const Title = styled.h1`
     color: #403937;
 `
 export const CoffeeList = styled.div`
-    display: flex;
     position: relative;
     max-width: 80rem;
-    top: 5rem;
-    /* padding-right: 15rem; */
-    margin:0;
+    top: 3rem;
+    left: 10%;
 `
 
 export const CoffeeItems = styled.div`
     display: inline-grid;
-    width: 17rem;
-    height: 15rem;
+    width: 16rem;
+    height: 19.375rem;
     margin-top: 4rem;
     position: relative;
-    /* grid-template-rows: auto 2fr; */
-    background: #FF871F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
+    margin-right: 1rem;
+    background: ${props => props.theme['base-card']};
+    
+    border-radius: 6px 36px;
+`
+
+export const NameCoffes = styled.h2`
+    text-align: center;
+    height: 1.625rem;
+    margin-top: 9.313rem;
+
+    font-family: 'Baloo 2';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 130%;
+
+    color: ${props => props.theme['base-subtitle']};
 `
