@@ -45,7 +45,7 @@ export const CoffeeItems = styled.div`
 export const NameCoffes = styled.h2`
     text-align: center;
     height: 1.625rem;
-    margin-top: 1rem;
+    
 
     font-family: 'Baloo 2';
     font-style: normal;
@@ -58,18 +58,18 @@ export const NameCoffes = styled.h2`
 
 export const ImageProducts = styled.img`
     position: absolute;
-    width: 120px;
-    height: 120px;
+    width: 7.5rem;
+    height: 7.5rem;
     left: calc(50% - 120px/2);
-    top: -20px; 
+    top: -1.25rem; 
 `
 export const PriceProducts = styled.div`
     display: flex;
     font-family: 'Roboto';
     font-style: normal;
-    /* line-height: 130%; */
+    
     padding-left: 1rem;
-    color: #574F4D;
+    color: ${props => props.theme['base-text']};
 
     h1{
         line-height: 3.5rem;
@@ -86,25 +86,57 @@ export const Categories = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: center;
-    /* align-items: center;
-    padding: 4px 8px;
-
-    width: 81px;
-    height: 21px;
+`
+export const FirstCategory = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 5.063rem;
+    height: 1.313rem;
 
     margin-top:7rem;
 
-    background: #F1E9C9;
-    border-radius: 100px; */
+    background: ${props => props.theme['yellow-light']};
+    border-radius: 100px;
 `
+export const SecondCategory = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 
+    width: 4.375rem;
+    height: 1.313rem;
+    margin-left: 0.375rem;
+    margin-top: 7rem;
+
+    background: ${props => props.theme['yellow-light']};
+    border-radius: 100px;
+`
 export const CategoriesName  = styled.p`
     font-family: 'Roboto';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 10px;
-        line-height: 130%;
-        /* identical to box height, or 13px */
-        text-transform: uppercase;
-        color: #C47F17;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 130%;
+        
+    text-transform: uppercase;
+    color: ${props => props.theme['yellow-dark']};
+`
+
+export const DescriptionItens = styled.div`
+    display: flex;
+    text-align: center;
+
+    margin-left: 1.25rem;
+    margin-right: 1.25rem;
+   
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 130%;
+
+    color: color: ${props => props.theme['base-label']};;
 `

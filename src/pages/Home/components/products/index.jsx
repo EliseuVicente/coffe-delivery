@@ -6,6 +6,8 @@ const coffees = [
         id: 1,
         product: 'Expresso Tradicional',
         category: 'Tradicional',
+        subcategory: '',
+        description: 'O tradicional café feito com água quente e grãos moídos',
         valor: '9,90',
         image: 'public/tradicional.svg',
         // quantidade: 
@@ -15,6 +17,8 @@ const coffees = [
         id: 2,
         product: 'Expresso Americano',
         category: 'Tradicional',
+        subcategory: '',
+        description: 'Expresso diluído, menos intenso que o tradicional',
         valor: '9,90',
         image: 'public/americano.svg',
     },
@@ -22,6 +26,8 @@ const coffees = [
         id: 3,
         product: 'Expresso Cremoso',
         category: 'Tradicional',
+        subcategory: '',
+        description: 'Café expresso tradicional com espuma cremosa',
         valor: '9,90',
         image: 'public/cremoso.svg',
     },
@@ -30,6 +36,7 @@ const coffees = [
         product: 'Expresso Gelado',
         category: 'Tradicional',
         sub_category: 'Gelado',
+        description: 'Bebida preparada com café expresso e cubos de gelo',
         valor: '9,90',
         image: 'public/gelado.svg',
     },
@@ -38,6 +45,7 @@ const coffees = [
         product: 'Café com Leite',
         category: 'Tradicional',
         sub_category: 'Com leite',
+        description: 'Meio a meio de expresso tradicional com leite vaporizado',
         valor: '9,90',
         image: 'public/cafecomleite.svg',
     },
@@ -46,6 +54,7 @@ const coffees = [
         product: 'Latte',
         category: 'Tradicional',
         sub_category: 'Com leite',
+        description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
         valor: '9,90',
         image: 'public/latte.svg',
     },
@@ -54,6 +63,7 @@ const coffees = [
         product: 'Capuccino',
         category: 'Tradicional',
         sub_category: 'Com leite',
+        description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
         valor: '9,90',
         image: 'public/capuccino.svg',
     },
@@ -62,6 +72,7 @@ const coffees = [
         product: 'Macchiato',
         category: 'Tradicional',
         sub_category: 'Com leite',
+        description: 'Café expresso misturado com um pouco de leite quente e espuma',
         valor: '9,90',
         image: 'public/macchiato.svg',
     },
@@ -70,6 +81,7 @@ const coffees = [
         product: 'Mocaccino',
         category: 'Tradicional',
         sub_category: 'Com leite',
+        description: 'Café expresso com calda de chocolate, pouco leite e espuma',
         valor: '9,90',
         image: 'public/mocaccino.svg',
     },
@@ -78,34 +90,43 @@ const coffees = [
         product: 'Chocolate Quente',
         category: 'Especial',
         sub_category: 'Com leite',
+        description: 'Bebida feita com chocolate dissolvido no leite quente e café',
         valor: '9,90',
         image: 'public/chocolatequente.svg',
     },
     {
         id: 11,
-        product: 'Especial',
+        product: 'Cubano',
         category: 'Alcoólico',
         sub_category: 'Com leite',
+        description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
         valor: '9,90',
         image: 'public/cubano.svg',
     },
     {
         id: 12,
         product: 'Havaiano',
-        product: 'Especial',
-        category: '',
+        category: 'Especial',
+        subcategory: '',
+        description: 'Bebida adocicada preparada com café e leite de coco',
         valor: '9,90',
         image: 'public/havaiano.svg',
     },
     {
         id: 13,
         product: 'Árabe',
+        category: 'Especial',
+        subcategory: '',
+        description: 'Bebida preparada com grãos de café árabe e especiarias',
         valor: '9,90',
         image: 'public/arabe.svg',
     },
     {
         id: 14,
         product: 'Irlandês',
+        category: 'Especial',
+        sub_category: 'Alcoólico',
+        description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
         valor: '9,90',
         image: 'public/irlandes.svg',
     },
@@ -116,12 +137,11 @@ export function Products(){
     return (
         <ContainerProducts>
             <Title>Nossos Cafés</Title>
-
+            
             <CoffeeList>
 
             {coffees.map((coffee)=>{
                     return (
-                            
                             <ListProducts
                                 key={coffee.id}
                                 content={coffee.product}
@@ -129,72 +149,11 @@ export function Products(){
                                 image={coffee.image}
                                 category={coffee.category}
                                 subcategory={coffee.sub_category}
+                                description={coffee.description}
                             />
-                            
-                      
                     )
                 })}
                 </CoffeeList>
         </ContainerProducts>
-
-        /* <CoffeeItems>
-                        <NameCoffes>Expresso Tradicional</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Expresso Americano</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Expresso Cremoso</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Expresso Gelado</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Café com Leite</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Latte</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Capuccino</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Macchiato</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Mocaccino</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Chocolate Quente</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Cubano</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Havaiano</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Árabe</NameCoffes>
-                    </CoffeeItems>
-
-                    <CoffeeItems>
-                        <NameCoffes>Irlandês</NameCoffes>
-                    </CoffeeItems>
-                </CoffeeList> */
     )
 }
-
-
-    
