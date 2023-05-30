@@ -8,8 +8,11 @@ export const GlobalStyle = createGlobalStyle`
     box-sizing: border-box; 
 }
 
-body {
+html,body {
     width: 100%;
     background-color: ${props => props.theme['background']};
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
 }
 `

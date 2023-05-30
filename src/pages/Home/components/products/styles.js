@@ -21,7 +21,7 @@ export const Title = styled.h1`
     font-size: 32px;
     line-height: 130%;
 
-    color: #403937;
+    color: ${props => props.theme['base-subtitle']};
 `
 export const CoffeeList = styled.div`
     position: relative;
@@ -36,17 +36,14 @@ export const CoffeeItems = styled.div`
     height: 19.375rem;
     margin-top: 4rem;
     position: relative;
-    margin-right: 1rem;
+    margin-right: 2rem;
     background: ${props => props.theme['base-card']};
-
     border-radius: 6px 36px;
 `
 
 export const NameCoffes = styled.h2`
     text-align: center;
     height: 1.625rem;
-    
-
     font-family: 'Baloo 2';
     font-style: normal;
     font-weight: 700;
@@ -61,26 +58,7 @@ export const ImageProducts = styled.img`
     width: 7.5rem;
     height: 7.5rem;
     left: calc(50% - 120px/2);
-    top: -1.25rem; 
-`
-export const PriceProducts = styled.div`
-    display: flex;
-    font-family: 'Roboto';
-    font-style: normal;
-    
-    padding-left: 1rem;
-    color: ${props => props.theme['base-text']};
-
-    h1{
-        line-height: 3.5rem;
-        font-weight: 400;
-        font-size: 14px;
-        padding-right: .2rem ;
-    }
-    span{
-        font-family: 'Baloo 2';
-        font-size: 30px;
-    }
+    top: -1.25rem;
 `
 export const Categories = styled.div`
     display: flex;
@@ -115,8 +93,6 @@ export const SecondCategory = styled.div`
     border-radius: 100px;
 `
 export const CategoriesName  = styled.p`
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 700;
     font-size: 10px;
     line-height: 130%;
@@ -124,19 +100,75 @@ export const CategoriesName  = styled.p`
     text-transform: uppercase;
     color: ${props => props.theme['yellow-dark']};
 `
-
 export const DescriptionItens = styled.div`
-    display: flex;
     text-align: center;
 
     margin-left: 1.25rem;
-    margin-right: 1.25rem;
+    margin-right: 2rem;
    
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 130%;
 
-    color: color: ${props => props.theme['base-label']};;
+    color: ${props => props.theme['base-label']};
+`
+export const SectionBuy = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 2rem;
+    margin-left: 1.5rem;
+    gap: 1.813rem;
+    height: 2.375rem;   
+`
+export const Action = styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left:-1rem;
+    width: 7.375rem;
+    height: 2.375rem;
+`
+export const PriceProducts = styled.div`
+    display: flex;
+    margin-top: 0.5rem;
+    color: ${props => props.theme['base-text']};
+
+    h1{
+        line-height: 3.5rem;
+        font-weight: 400;
+        font-size: 14px;
+    }
+    span{
+        font-family: 'Baloo 2';
+        font-size: 30px;
+    }
+`
+export const Counter = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0.25rem;
+    width: 4.5rem;
+    height: 2.375rem;
+
+    background: ${props => props.theme['base-button']};;
+    border-radius: 6px;
+
+`
+
+export const CarMarketing = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    width: 2.375rem;
+    height: 2.375rem;
+
+    background: ${props => props.theme['purple-dark']};
+    border-radius: 6px;
 `

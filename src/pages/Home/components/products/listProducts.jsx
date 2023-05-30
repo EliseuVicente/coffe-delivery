@@ -1,3 +1,4 @@
+import { Minus, Plus, ShoppingCart } from "phosphor-react"
 import { 
         Categories,
         CategoriesName,
@@ -7,10 +8,14 @@ import {
         PriceProducts,
         FirstCategory,
         SecondCategory,
-        DescriptionItens 
+        DescriptionItens, 
+        Action,
+        SectionBuy,
+        Counter,
+        CarMarketing
     } from "./styles"
 
-export function ListProducts({content,valor,image,category,subcategory,description}) {
+export function ListProducts({content,valor,image,category,subcategory,description,quantity}) {
     return (
     
             <CoffeeItems> 
@@ -33,9 +38,24 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
 
                 <DescriptionItens>{description}</DescriptionItens>
 
-                <PriceProducts>
-                    <h1>R$</h1> <span>{valor}</span>
-                 </PriceProducts>
+                <SectionBuy>
+                    <PriceProducts>
+                        <h1>R$</h1> <span>{valor}</span>
+                    </PriceProducts>
+
+                    <Action>
+                        <Counter>
+                            <Minus color="#8047F8" weight="bold"/>
+                            {quantity} 
+                            <Plus color="#8047F8" weight="bold" />
+                        </Counter>
+
+                        <CarMarketing>
+                            <ShoppingCart size={20} color="white" weight="fill"/>
+                        </CarMarketing>
+
+                    </Action>
+                 </SectionBuy>
                 
             </CoffeeItems>
 
