@@ -1,5 +1,7 @@
-import { CoffeeItems, CoffeeList, ContainerProducts, NameCoffes, Title } from "./styles"
 import { ListProducts } from "./listProducts"
+import { CoffeeList, ContainerProducts, Title } from "./styles"
+
+
 
 //object coffee
 const coffees = [
@@ -148,6 +150,12 @@ const coffees = [
 ]
 
 export function Products(){
+
+    //funcao para me passar a quantidade do produto.
+    function handleSumProducts(){
+        console.log(coffees)
+    }
+
     return (
         <ContainerProducts>
             <Title>Nossos Cafés</Title>
@@ -157,6 +165,7 @@ export function Products(){
             {coffees.map((coffee)=>{
                     return (
                             <ListProducts
+                                id={coffee.id}
                                 key={coffee.id}
                                 content={coffee.product}
                                 valor={coffee.valor}
@@ -165,6 +174,7 @@ export function Products(){
                                 subcategory={coffee.sub_category}
                                 description={coffee.description}
                                 quantity={coffee.quantity}
+                                handleSumProducts={handleSumProducts}
                             />
                     )
                 })}

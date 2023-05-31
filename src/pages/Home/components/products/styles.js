@@ -157,9 +157,7 @@ export const Counter = styled.div`
 
     background: ${props => props.theme['base-button']};;
     border-radius: 6px;
-
 `
-
 export const CarMarketing = styled.div`
     display: flex;
     flex-direction: row;

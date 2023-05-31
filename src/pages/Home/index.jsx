@@ -3,7 +3,6 @@ import { Action, BoxCircle, CicleYellowDark, CircleGray, CirclePurple, CircleYel
 import { Products } from "./components/products"
 
 
-
 export function Home(){
 
     return (
@@ -52,7 +51,7 @@ export function Home(){
                         
                     <LabelItems>
                         <CirclePurple>
-                            <Coffee size={17} color="white" weight="fill"/>
+                            <Coffee size={17} color="white" weight="fill" />
                         </CirclePurple>
                         <span>O café chega fresquinho até você</span>
                     </LabelItems>

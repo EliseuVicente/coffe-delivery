@@ -11,11 +11,17 @@ import {
         DescriptionItens, 
         Action,
         SectionBuy,
-        Counter,
-        CarMarketing
+        CarMarketing,
+        Counter
     } from "./styles"
 
-export function ListProducts({content,valor,image,category,subcategory,description,quantity}) {
+
+function handleClick(){
+        console.log("Teste")
+    }
+
+
+export function ListProducts({id,content,valor,image,category,subcategory,description,quantity,handleSumProducts}) {
     return (
     
             <CoffeeItems> 
@@ -45,13 +51,22 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
 
                     <Action>
                         <Counter>
-                            <Minus color="#8047F8" weight="bold"/>
-                            {quantity} 
-                            <Plus color="#8047F8" weight="bold" />
+                            <Minus 
+                                color="#8047F8" 
+                                weight="bold" 
+                                cursor="pointer"
+                                onClick={handleClick}/>
+                                {quantity} 
+                            <Plus 
+                                color="#8047F8"
+                                weight="bold"
+                                cursor="pointer"
+                                onClick={handleSumProducts}
+                            />
                         </Counter>
 
                         <CarMarketing>
-                            <ShoppingCart size={20} color="white" weight="fill"/>
+                            <ShoppingCart size={20} color="white" weight="fill" cursor="pointer"/>
                         </CarMarketing>
 
                     </Action>
