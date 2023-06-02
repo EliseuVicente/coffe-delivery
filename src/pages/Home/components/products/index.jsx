@@ -152,8 +152,9 @@ const coffees = [
 export function Products(){
 
     //funcao para me passar a quantidade do produto.
-    function handleSumProducts(){
-        console.log(coffees)
+    const handleSumProducts = () =>{
+        const sum = coffees.indexOf(coffees.id);
+        console.log(sum);
     }
 
     return (
@@ -163,21 +164,21 @@ export function Products(){
             <CoffeeList>
 
             {coffees.map((coffee)=>{
-                    return (
-                            <ListProducts
-                                id={coffee.id}
-                                key={coffee.id}
-                                content={coffee.product}
-                                valor={coffee.valor}
-                                image={coffee.image}
-                                category={coffee.category}
-                                subcategory={coffee.sub_category}
-                                description={coffee.description}
-                                quantity={coffee.quantity}
-                                handleSumProducts={handleSumProducts}
-                            />
-                    )
-                })}
+                return (
+                    <ListProducts
+                        id={coffee.id}
+                        key={coffee.id}
+                        content={coffee.product}
+                        valor={coffee.valor}
+                        image={coffee.image}
+                        category={coffee.category}
+                        subcategory={coffee.sub_category}
+                        description={coffee.description}
+                        quantity={coffee.quantity}
+                        handleSumProducts={handleSumProducts}
+                    />
+                )
+            })}
                 </CoffeeList>
         </ContainerProducts>
     )
