@@ -16,12 +16,18 @@ import {
     } from "./styles"
 
 
-function handleClick(){
-        console.log("Teste")
-    }
-
-
 export function ListProducts({id,content,valor,image,category,subcategory,description,quantity,handleSumProducts}) {
+    
+    function handleClick(){
+        // A lgica da função esta funcionando
+        if (id == id){
+            quantity = 2
+            console.log(quantity)
+        }  
+        
+            }
+        
+    
     return (
     
             <CoffeeItems> 
