@@ -23,9 +23,9 @@ function handleClick(){
 
 export function ListProducts({id,content,valor,image,category,subcategory,description,quantity,handleSumProducts}) {
 
- /*    function handleSumProducts(id){
+    function handleSumProducts(id){
         console.log(id)
-    } */
+    }
 
 
     return (
