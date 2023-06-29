@@ -148,14 +148,23 @@ const coffees = [
     },
     
 ]
+function handleSumProducts(){
+    // const filter = coffees.find(element => element.id >  3 )
+    // console.log(filter)
+    
+ }
 
 export function Products(){
 
     //funcao para me passar a quantidade do produto.
+<<<<<<< HEAD
     const handleSumProducts = () =>{
         const sum = coffees.indexOf(coffees.id);
         console.log(sum);
     }
+=======
+   
+>>>>>>> 6a25e849db59df250d7a022fc8a4940a77cbbe68
 
     return (
         <ContainerProducts>
