@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Minus, Plus, ShoppingCart } from "phosphor-react"
 import { 
         Categories,
@@ -15,18 +16,26 @@ import {
         Counter
     } from "./styles"
 
-
-function handleClick(){
-        console.log("Teste")
+export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts}) {
+    const[quantity, setquantity] = useState(1);
+    const [selected, setselected] = useState(false);
+    
+    function handleSumProducts(){
+        setquantity(quantity + 1);
     }
 
-
-export function ListProducts({id,content,valor,image,category,subcategory,description,quantity,handleSumProducts}) {
-
-    function handleSumProducts(id){
-        console.log(id)
+    function handleMinusProducts(){
+        if (quantity > 1) {
+        setquantity(quantity - 1);
+        }
     }
 
+    function SelectedCar(){
+        setselected(true);
+        if (selected === true){
+           console.log("Mais um")
+        }
+    }
 
     return (
     
@@ -61,7 +70,7 @@ export function ListProducts({id,content,valor,image,category,subcategory,descri
                                 color="#8047F8" 
                                 weight="bold" 
                                 cursor="pointer"
-                                onClick={handleClick}/>
+                                onClick={handleMinusProducts}/>
                                 {quantity} 
                             <Plus 
                                 color="#8047F8"
@@ -72,7 +81,12 @@ export function ListProducts({id,content,valor,image,category,subcategory,descri
                         </Counter>
 
                         <CarMarketing>
-                            <ShoppingCart size={20} color="white" weight="fill" cursor="pointer"/>
+                            <ShoppingCart 
+                                size={20} 
+                                color="white" 
+                                weight="fill" 
+                                cursor="pointer"
+                                onClick={SelectedCar}/>
                         </CarMarketing>
 
                     </Action>
