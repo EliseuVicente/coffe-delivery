@@ -1,5 +1,5 @@
-import { Coffee, MapPin, Package, ShoppingCart, Timer } from "phosphor-react";
-import { Action, BoxCircle, CicleYellowDark, CircleGray, CirclePurple, CircleYellow, Header, IconCar, LabelItems, Navbar, SubTitle, Title, TitleHeader} from "./styles";
+import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
+import { BoxCircle, CicleYellowDark, CircleGray, CirclePurple, CircleYellow, Header, LabelItems, SubTitle, Title, TitleHeader} from "./styles";
 import { Products } from "./components/products"
 
 
@@ -7,18 +7,7 @@ export function Home(){
 
     return (
        
-         <div>
-            <Navbar>
-                <img src='.\src\assets\logo.svg'/>
-                <Action>
-                   <MapPin size={23} color= "#4B2995"weight="fill" />
-                   <div> Campinas, SP</div>
-                   <IconCar>
-                    <ShoppingCart size={23} color="#C47F17" weight="fill"/>
-                   </IconCar>
-                </Action>
-            </Navbar>
-                
+         <div> 
             <Header>
                 <img src='.\src\assets\intro.svg'/>
 
