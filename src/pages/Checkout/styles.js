@@ -105,22 +105,20 @@ export const LabelPayment = styled.div`
 
 export const TypePayment = styled.div`
     display: inline-flex;
-    width: 11.5rem;
     padding: 1rem;
     margin-top: 2rem;
-    margin-right: 0.75rem;
+    margin-right: .9rem;
     gap: 0.75rem;
     align-items: center;
-    
     border-radius: 0.375rem;
     background: var(--base-button, #E6E5E5);
 
-    :first-child {
-        margin-left: 5rem;
+    &:nth-child(4) {
+        width: 10.6rem;
+        margin-right: 0rem;
     }
 
     p{
-       
         font-size: 0.75rem;
         font-style: normal;
         font-weight: 400;
@@ -131,8 +129,8 @@ export const TypePayment = styled.div`
 
 export const ContainerCoffeeList = styled.div`
     width: 28rem;
-    
-    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-left: 10rem;
     padding: 5rem;
     border-radius: 0.375rem 2.75rem;
     background: ${props => props.theme['base-card']};
