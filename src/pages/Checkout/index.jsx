@@ -1,6 +1,8 @@
 import { FormAdress,ContainerCoffeeList, LabelForm, ContainerForm, ContainerPayment, Container, AddresInput, StreetInput, ComplementInput, CityInput, UFInput, LabelPayment, TypePayment} from "./styles"
 import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
 export function Checkout(){
+
+  console.log(coffees2)
     return (
       <>
       <Container>
@@ -11,7 +13,7 @@ export function Checkout(){
                 <h1>Endereço de Entrega</h1>
                 <span>Informe o endereço onde deseja receber seu pedido</span>
             </LabelForm>
-
+              
             <form action="">
                 <AddresInput type="text" placeholder="CEP" required/>
                 <StreetInput type="text" placeholder="Rua" required/>

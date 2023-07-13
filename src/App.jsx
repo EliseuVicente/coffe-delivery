@@ -6,6 +6,8 @@ import { defaultTheme } from "./styles/themes/default"
 
 export function App() {
 
+  const coffees2 = [1,2,3,4]
+
   return (
    
     <ThemeProvider theme={defaultTheme}>
