@@ -1,9 +1,10 @@
-import { useState } from "react"
+import { useContext, useState } from "react"
 import { ListProducts } from "./listProducts"
 import { CoffeeList, ContainerProducts, Title } from "./styles"
+import { ProductsContext } from "../../../../contexts/ProductsContext"
 
 //object coffee
-const coffees = [
+export const coffees = [
     {
         id: 1,
         product: 'Expresso Tradicional',

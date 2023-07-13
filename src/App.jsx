@@ -4,17 +4,20 @@ import { BrowserRouter } from 'react-router-dom'
 import { GlobalStyle } from './styles/themes/global'
 import { defaultTheme } from "./styles/themes/default"
 
-export function App() {
+import { ProductsContext } from "./contexts/ProductsContext"
+import { coffees } from "./pages/Home/components/products"
 
-  const coffees2 = [1,2,3,4]
+export function App() {
 
   return (
    
     <ThemeProvider theme={defaultTheme}>
-      <BrowserRouter>
-          <Router />
-          <GlobalStyle />
-      </BrowserRouter>
+      <ProductsContext.Provider value={{coffees}}>
+        <BrowserRouter>
+            <Router />
+            <GlobalStyle />
+        </BrowserRouter>
+      </ProductsContext.Provider>
     </ThemeProvider>
 
   )
