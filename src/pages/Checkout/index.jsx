@@ -1,7 +1,11 @@
 import { FormAdress,ContainerCoffeeList, LabelForm, ContainerForm, ContainerPayment, Container, AddresInput, StreetInput, ComplementInput, CityInput, UFInput, LabelPayment, TypePayment} from "./styles"
 import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
-export function Checkout(){
-    return (
+
+
+export function Checkout({cafe}){
+   
+  
+  return (
       <>
       <Container>
         <ContainerForm>

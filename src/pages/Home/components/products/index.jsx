@@ -2,8 +2,6 @@ import { useState } from "react"
 import { ListProducts } from "./listProducts"
 import { CoffeeList, ContainerProducts, Title } from "./styles"
 
-
-
 //object coffee
 const coffees = [
     {
