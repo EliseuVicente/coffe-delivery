@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Minus, Plus, ShoppingCart } from "phosphor-react"
 import { 
         Categories,
@@ -15,10 +15,14 @@ import {
         CarMarketing,
         Counter
     } from "./styles"
+import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts}) {
+    
+    const {selected, setSelected} = useContext(ProductsContext)
+
     const[quantity, setquantity] = useState(1);
-    const [selected, setselected] = useState(false);
+    /* const [selected, setselected] = useState(false); */
     
     function handleSumProducts(){
         setquantity(quantity + 1);
@@ -30,10 +34,11 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
         }
     }
 
-    function SelectedCar(){
-        setselected(true);
+    const SelectedCar = () =>{
+        setSelected(true);
         if (selected === true){
-           console.log("Mais um")
+           console.log(selected)
+           console.log(category)
         }
     }
 
@@ -46,13 +51,12 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
                         <CategoriesName>{category}</CategoriesName>
                     </FirstCategory>
 
-                    {subcategory == null ? ( 
-                        <div></div>
-                ): (
+                    {subcategory && (
                     <SecondCategory>
                         <CategoriesName>{subcategory}</CategoriesName>
                     </SecondCategory>
                 )}
+
                 </Categories>
                
                 <NameCoffes>{content}</NameCoffes>

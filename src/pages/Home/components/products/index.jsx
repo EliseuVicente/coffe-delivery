@@ -1,7 +1,5 @@
-import { useContext, useState } from "react"
 import { ListProducts } from "./listProducts"
 import { CoffeeList, ContainerProducts, Title } from "./styles"
-import { ProductsContext } from "../../../../contexts/ProductsContext"
 
 //object coffee
 export const coffees = [
@@ -133,7 +131,6 @@ export const coffees = [
         image: 'public/irlandes.svg',
     },
 ]
-
 
 export function Products(){
 
