@@ -2,7 +2,8 @@ import { ListProducts } from "./listProducts"
 import { CoffeeList, ContainerProducts, Title } from "./styles"
 
 //object coffee
-export const coffees = [
+
+ export const coffees = [
     {
         id: 1,
         product: 'Expresso Tradicional',
@@ -11,7 +12,6 @@ export const coffees = [
         description: 'O tradicional café feito com água quente e grãos moídos',
         valor: '9,90',
         image: 'public/tradicional.svg',
-        // selecionado:
     },
     {
         id: 2,
@@ -131,7 +131,7 @@ export const coffees = [
         image: 'public/irlandes.svg',
     },
 ]
-
+ 
 export function Products(){
 
     return (

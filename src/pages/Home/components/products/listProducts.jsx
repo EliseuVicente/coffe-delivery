@@ -19,29 +19,26 @@ import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts}) {
     
-    const {selected, setSelected} = useContext(ProductsContext)
+    const {coffees, setSelected} = useContext(ProductsContext)
 
-    const[quantity, setquantity] = useState(1);
+    const[quantity, setQuantity] = useState(1);
     /* const [selected, setselected] = useState(false); */
     
     function handleSumProducts(){
-        setquantity(quantity + 1);
+        setQuantity(quantity + 1);
     }
 
     function handleMinusProducts(){
         if (quantity > 1) {
-        setquantity(quantity - 1);
+        setQuantity(quantity - 1);
         }
     }
 
     const SelectedCar = () =>{
-        setSelected(true);
-        if (selected === true){
-           console.log(selected)
-           console.log(category)
-        }
+        setSelected(true)
+        console.log(coffees)
     }
-
+  
     return (
     
             <CoffeeItems> 

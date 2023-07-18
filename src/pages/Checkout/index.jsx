@@ -5,10 +5,7 @@ import { ProductsContext } from "../../contexts/ProductsContext"
 
 export function Checkout(){
    
-  const {coffees, selected} = useContext(ProductsContext)
-  
-
-  console.log(selected)
+const {coffees, selected} = useContext(ProductsContext)
 
   return (
 
@@ -74,13 +71,14 @@ export function Checkout(){
       <ContainerCoffeeList>
       
       {coffees.map((coffee)=>{
-             if(selected != true){
-                 return (
+             if(selected == true){
+                 return ( 
                   <>
                     <h1>{coffee.product}</h1>
                     <div>{coffee.category}</div>
                   </>
                  ) 
+                 
              }
               
             })}
