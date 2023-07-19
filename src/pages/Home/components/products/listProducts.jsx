@@ -19,7 +19,7 @@ import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts}) {
     
-    const {coffees, setSelected} = useContext(ProductsContext)
+    const {cartItem, setCartItem} = useContext(ProductsContext)
 
     const[quantity, setQuantity] = useState(1);
     /* const [selected, setselected] = useState(false); */
@@ -35,12 +35,12 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
     }
 
     const SelectedCar = () =>{
-        setSelected(true)
-        console.log(coffees)
+        setCartItem([...cartItem, coffees]);
+        console.log(cartItem)
     }
   
     return (
-    
+
             <CoffeeItems> 
                 <ImageProducts src={image}/>
                 <Categories>
@@ -92,7 +92,7 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
 
                     </Action>
                  </SectionBuy>
-                
+
             </CoffeeItems>
 
     )

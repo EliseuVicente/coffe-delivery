@@ -5,14 +5,16 @@ export const ProductsContext = createContext({ })
 
 export function ProductsContextProvider({children}){
 
-    const [selected, setSelected] = useState(false);
-    
+    // const [selected, setSelected] = useState(false)
+
+    const [cartItem, setCartItem] = useState([''])
+
     return (
         <ProductsContext.Provider 
             value={{
                 coffees,
-                selected,
-                setSelected,
+                cartItem,
+                setCartItem
             }}>
             {children}
         </ProductsContext.Provider>
