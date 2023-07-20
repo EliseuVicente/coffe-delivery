@@ -17,12 +17,12 @@ import {
     } from "./styles"
 import { ProductsContext } from "../../../../contexts/ProductsContext";
 
-export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts}) {
+
+export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts,id}) {
     
-    const {cartItem, setCartItem} = useContext(ProductsContext)
+    const {coffees,cartItem,setCartItem} = useContext(ProductsContext)
 
     const[quantity, setQuantity] = useState(1);
-    /* const [selected, setselected] = useState(false); */
     
     function handleSumProducts(){
         setQuantity(quantity + 1);
@@ -34,8 +34,11 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
         }
     }
 
-    const SelectedCar = () =>{
-        setCartItem([...cartItem, coffees]);
+    const handleAddToCart = (id) =>{
+        const coffee = coffees.find(coffee => coffee.id == id)
+        const item = coffee
+        const newCartItem = [...cartItem, item]
+        setCartItem(newCartItem)
         console.log(cartItem)
     }
   
@@ -87,7 +90,7 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
                                 color="white" 
                                 weight="fill" 
                                 cursor="pointer"
-                                onClick={SelectedCar}/>
+                                onClick={() => handleAddToCart(id)}/>
                         </CarMarketing>
 
                     </Action>

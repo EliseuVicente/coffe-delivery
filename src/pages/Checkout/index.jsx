@@ -5,8 +5,8 @@ import { ProductsContext } from "../../contexts/ProductsContext"
 
 export function Checkout(){
    
-const { cartItem, setCartItem} = useContext(ProductsContext)
-console.log(cartItem)
+const { coffees,cartItem} = useContext(ProductsContext)
+// console.log(cartItem)
   return (
 
       <>
@@ -70,10 +70,14 @@ console.log(cartItem)
 
       <ContainerCoffeeList>
       
-      {cartItem.map((cart)=>{
+      
+      {cartItem.map((item)=>{
+        console.log(cartItem)
                  return ( 
                   <>
-                    <div>{cart.category}</div>
+                  <div>{item.description}</div>
+                    <div>{item.category}</div>
+                    
                   </>
                  )
             })}

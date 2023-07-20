@@ -151,6 +151,7 @@ export function Products(){
                         category={coffee.category}
                         subcategory={coffee.sub_category}
                         description={coffee.description}
+                        
                     />
                 )
             })}
