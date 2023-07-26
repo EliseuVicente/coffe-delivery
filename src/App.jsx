@@ -5,11 +5,8 @@ import { GlobalStyle } from './styles/themes/global'
 import { defaultTheme } from "./styles/themes/default"
 
 import { ProductsContextProvider } from "./contexts/ProductsContext"
-/* import { coffees } from "./pages/Home/components/products"
-import { useState } from "react" */
 
 export function App() {
-  /* const [selected, setSelected] = useState(false); */
 
   return (
    

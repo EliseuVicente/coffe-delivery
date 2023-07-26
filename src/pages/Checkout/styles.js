@@ -13,7 +13,6 @@ export const ContainerForm = styled.div`
     background: ${props => props.theme['base-card']};
     
 `
-
 export const FormAdress = styled.div`
     display: flex;
     padding: 2.5rem;
@@ -127,12 +126,15 @@ export const TypePayment = styled.div`
     }
 `
 
-export const ContainerCoffeeList = styled.div`
+export const ContainerCart = styled.div`
+    display: flex;
     width: 28rem;
     margin-top: 1rem;
     margin-left: 10rem;
-    padding: 5rem;
-    border-radius: 0.375rem 2.75rem;
+    padding: 2.5rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.5rem;
     background: ${props => props.theme['base-card']};
 
     @media (max-width: 1500px) {

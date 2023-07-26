@@ -10,7 +10,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         subcategory: '',
         description: 'O tradicional café feito com água quente e grãos moídos',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/tradicional.svg',
     },
     {
@@ -19,7 +19,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         subcategory: '',
         description: 'Expresso diluído, menos intenso que o tradicional',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/americano.svg',
     },
     {
@@ -28,7 +28,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         subcategory: '',
         description: 'Café expresso tradicional com espuma cremosa',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/cremoso.svg',
     },
     {
@@ -37,7 +37,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         sub_category: 'Gelado',
         description: 'Bebida preparada com café expresso e cubos de gelo',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/gelado.svg',
     },
     {
@@ -46,7 +46,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         sub_category: 'Com leite',
         description: 'Meio a meio de expresso tradicional com leite vaporizado',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/cafecomleite.svg',
     },
     {
@@ -55,7 +55,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         sub_category: 'Com leite',
         description: 'Uma dose de café expresso com o dobro de leite e espuma cremosa',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/latte.svg',
     },
     {
@@ -64,7 +64,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         sub_category: 'Com leite',
         description: 'Bebida com canela feita de doses iguais de café, leite e espuma',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/capuccino.svg',
     },
     {
@@ -73,7 +73,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         sub_category: 'Com leite',
         description: 'Café expresso misturado com um pouco de leite quente e espuma',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/macchiato.svg',
     },
     {
@@ -82,7 +82,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Tradicional',
         sub_category: 'Com leite',
         description: 'Café expresso com calda de chocolate, pouco leite e espuma',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/mocaccino.svg',
     },
     {
@@ -91,7 +91,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Especial',
         sub_category: 'Com leite',
         description: 'Bebida feita com chocolate dissolvido no leite quente e café',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/chocolatequente.svg',
     },
     {
@@ -100,7 +100,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Alcoólico',
         sub_category: 'Com leite',
         description: 'Drink gelado de café expresso com rum, creme de leite e hortelã',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/cubano.svg',
     },
     {
@@ -109,7 +109,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Especial',
         subcategory: '',
         description: 'Bebida adocicada preparada com café e leite de coco',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/havaiano.svg',
     },
     {
@@ -118,7 +118,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Especial',
         subcategory: '',
         description: 'Bebida preparada com grãos de café árabe e especiarias',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/arabe.svg',
     },
     {
@@ -127,17 +127,17 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
         category: 'Especial',
         sub_category: 'Alcoólico',
         description: 'Bebida a base de café, uísque irlandês, açúcar e chantilly',
-        valor: '9,90',
+        value: '9,90',
         image: 'public/irlandes.svg',
     },
 ]
- 
+
 export function Products(){
 
     return (
         <ContainerProducts>
             <Title>Nossos Cafés</Title>
-            
+
             <CoffeeList>
 
             {coffees.map((coffee)=>{
@@ -146,7 +146,7 @@ export function Products(){
                         id={coffee.id}
                         key={coffee.id}
                         content={coffee.product}
-                        valor={coffee.valor}
+                        value={coffee.value}
                         image={coffee.image}
                         category={coffee.category}
                         subcategory={coffee.sub_category}

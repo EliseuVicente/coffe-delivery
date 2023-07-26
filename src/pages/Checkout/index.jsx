@@ -1,12 +1,9 @@
-import { useContext } from "react"
-import { FormAdress,ContainerCoffeeList, LabelForm, ContainerForm, ContainerPayment, Container, AddresInput, StreetInput, ComplementInput, CityInput, UFInput, LabelPayment, TypePayment} from "./styles"
+import { FormAdress,LabelForm, ContainerForm, ContainerPayment, Container, AddresInput, StreetInput, ComplementInput, CityInput, UFInput, LabelPayment, TypePayment, ContainerCart} from "./styles"
 import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
-import { ProductsContext } from "../../contexts/ProductsContext"
+import { Cart } from "./components/Cart"
 
 export function Checkout(){
-   
-const { coffees,cartItem} = useContext(ProductsContext)
-// console.log(cartItem)
+
   return (
 
       <>
@@ -68,20 +65,11 @@ const { coffees,cartItem} = useContext(ProductsContext)
 
       </Container>
 
-      <ContainerCoffeeList>
+      <ContainerCart>
       
-      
-      {cartItem.map((item)=>{
-        console.log(cartItem)
-                 return ( 
-                  <>
-                  <div>{item.description}</div>
-                    <div>{item.category}</div>
-                    
-                  </>
-                 )
-            })}
-        </ContainerCoffeeList>
+        <Cart />
+     
+      </ContainerCart>
       
       </>
     )

@@ -18,15 +18,15 @@ import {
 import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 
-export function ListProducts({content,valor,image,category,subcategory,description,handleSumProducts,id}) {
+export function ListProducts({content,value,image,category,subcategory,description,id}) {
     
-    const {coffees,cartItem,setCartItem} = useContext(ProductsContext)
+    const {handleAddToCart, handleSumProducts, quantity, setQuantity} = useContext(ProductsContext)
+    
+    /* const[quantity, setQuantity] = useState(1); */
 
-    const[quantity, setQuantity] = useState(1);
-    
-    function handleSumProducts(){
-        setQuantity(quantity + 1);
-    }
+    /* function handleSumProducts(id){
+        setQuantity(quantity + 1); 
+    } */
 
     function handleMinusProducts(){
         if (quantity > 1) {
@@ -34,14 +34,6 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
         }
     }
 
-    const handleAddToCart = (id) =>{
-        const coffee = coffees.find(coffee => coffee.id == id)
-        const item = coffee
-        const newCartItem = [...cartItem, item]
-        setCartItem(newCartItem)
-        console.log(cartItem)
-    }
-  
     return (
 
             <CoffeeItems> 
@@ -65,7 +57,7 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
 
                 <SectionBuy>
                     <PriceProducts>
-                        <h1>R$</h1> <span>{valor}</span>
+                        <h1>R$</h1> <span>{value}</span>
                     </PriceProducts>
 
                     <Action>
@@ -80,7 +72,7 @@ export function ListProducts({content,valor,image,category,subcategory,descripti
                                 color="#8047F8"
                                 weight="bold"
                                 cursor="pointer"
-                                onClick={handleSumProducts}
+                                onClick={() => handleSumProducts(id)}
                             />
                         </Counter>
 
