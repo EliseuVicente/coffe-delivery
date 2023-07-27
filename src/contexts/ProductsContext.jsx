@@ -10,11 +10,14 @@ export function ProductsContextProvider({children}){
     const[quantity, setQuantity] = useState(1);
 
     const handleSumProducts = (id) =>{
+            const index = coffees.find(coffee => coffee.id == id)
             console.log(id)
-            setQuantity(quantity + 1)
-        
-    
-    }
+            console.log(index)
+            if ( index == id){
+                const sum  = quantity + 1
+                setQuantity(sum)
+            }
+        }
 
     const handleAddToCart = (id) =>{
         const index = coffees.find(coffee => coffee.id == id)
