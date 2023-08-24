@@ -22,11 +22,11 @@ export function ListProducts({content,value,image,category,subcategory,descripti
     
     const {handleAddToCart, handleSumProducts, quantity, setQuantity} = useContext(ProductsContext)
     
-    /* const[quantity, setQuantity] = useState(1); */
+    // const[quantity, setQuantity] = useState(1);
 
-    /* function handleSumProducts(id){
-        setQuantity(quantity + 1); 
-    } */
+    // function handleSumProducts(id){
+    //     setQuantity(quantity + 1); 
+    // } 
 
     function handleMinusProducts(){
         if (quantity > 1) {

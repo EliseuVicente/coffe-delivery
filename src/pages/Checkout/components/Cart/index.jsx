@@ -29,7 +29,7 @@ export function Cart(){
                                         color="#8047F8"
                                         weight="bold"
                                         cursor="pointer"
-                                        onClick={() => handleSumProducts()}
+                                        onClick={() => handleSumProducts(id)}
                                     />
                                 </Counter>
                                 <TrashButton>
