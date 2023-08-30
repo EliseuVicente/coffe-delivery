@@ -8,8 +8,6 @@ export function ProductsContextProvider({children}){
     const [cartItem, setCartItem] = useState([])
     const [productQuantities, setProductQuantities] = useState({})
 
-
-<<<<<<< HEAD
     const handleSumProducts = (id) => {
         const item = coffees.find(coffee => coffee.id === id)
         
@@ -38,24 +36,6 @@ export function ProductsContextProvider({children}){
             const newItem = {item, quantity}
             setCartItem(prevCartItem => [...prevCartItem, newItem])
         }
-        
-=======
-    const handleSumProducts = (id) =>{
-            const item = coffees.find(coffee => coffee.id === id)
-
-            if (item){
-                const sum  = quantity + 1
-                setQuantity(sum)
-            }
-       }
-
-    const handleAddToCart = (id) =>{
-        const index = coffees.find(coffee => coffee.id == id)
-        const newCartItem = [...cartItem, index]
-        setCartItem(newCartItem)
->>>>>>> e776e72a27475bd724c8daa055da6c09ba838253
-    }
-
   
     return (
         <ProductsContext.Provider 
@@ -69,4 +49,5 @@ export function ProductsContextProvider({children}){
             {children}
         </ProductsContext.Provider>
     )
+    }
 }
