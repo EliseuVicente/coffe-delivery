@@ -4,18 +4,20 @@ import { Action, Counter, DetailsItems, ImageProducts, ItemValue, ItemsCart, Nam
 import { Minus, Plus, Trash } from "phosphor-react"
 
 export function Cart(){
-    const {cartItem, quantity, handleSumProducts} = useContext(ProductsContext)
+    const {cartItem, productQuantities, handleSumProducts} = useContext(ProductsContext)
 
+    /* const quantity = productQuantities[cartItem] */
+   /*  console.log(cartItem) */
     return (
         <>
-            {cartItem.map((item)=>{
+            {cartItem.map((list)=>{
                 return (     
-                    <ItemsCart key={item.id}>
-                            <ImageProducts src={item.image}/>
+                    <ItemsCart key={list.item.id}>
+                            <ImageProducts src={list.item.image}/>
                         <DetailsItems>    
-                            <NameCoffes>{item.product}</NameCoffes>
+                            <NameCoffes>{list.item.product}</NameCoffes>
                             <ItemValue>
-                                <p>{item.value}</p>
+                                <p>{list.item.value}</p>
                             </ItemValue>
                             <Action>
                                 <Counter>
@@ -24,12 +26,13 @@ export function Cart(){
                                         weight="bold" 
                                         cursor="pointer"
                                     /*  onClick={handleMinusProducts} *//>
-                                        {quantity} 
+                                        {list.quantity}
+                                        
                                     <Plus
                                         color="#8047F8"
                                         weight="bold"
                                         cursor="pointer"
-                                        onClick={() => handleSumProducts()}
+                                        onClick={() => handleSumProducts(id)}
                                     />
                                 </Counter>
                                 <TrashButton>

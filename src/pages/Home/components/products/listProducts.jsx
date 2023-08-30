@@ -20,19 +20,9 @@ import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 export function ListProducts({content,value,image,category,subcategory,description,id}) {
     
-    const {handleAddToCart, handleSumProducts, quantity, setQuantity} = useContext(ProductsContext)
-    
-    /* const[quantity, setQuantity] = useState(1); */
+    const {handleAddToCart, handleSumProducts, productQuantities} = useContext(ProductsContext)
 
-    /* function handleSumProducts(id){
-        setQuantity(quantity + 1); 
-    } */
-
-    function handleMinusProducts(){
-        if (quantity > 1) {
-        setQuantity(quantity - 1);
-        }
-    }
+    const quantity = productQuantities[id] || 1
 
     return (
 
@@ -66,13 +56,13 @@ export function ListProducts({content,value,image,category,subcategory,descripti
                                 color="#8047F8" 
                                 weight="bold" 
                                 cursor="pointer"
-                                onClick={handleMinusProducts}/>
-                                {quantity} 
+                                /* onClick={handleMinusProducts} *//>
+                                {quantity}
                             <Plus 
                                 color="#8047F8"
                                 weight="bold"
                                 cursor="pointer"
-                                onClick={() => handleSumProducts(id)}
+                                onClick={() =>handleSumProducts(id)}
                             />
                         </Counter>
 
@@ -82,7 +72,7 @@ export function ListProducts({content,value,image,category,subcategory,descripti
                                 color="white" 
                                 weight="fill" 
                                 cursor="pointer"
-                                onClick={() => handleAddToCart(id)}/>
+                                onClick={() => handleAddToCart(id, quantity)}/>
                         </CarMarketing>
 
                     </Action>

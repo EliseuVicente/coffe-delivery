@@ -3,7 +3,7 @@ import { CoffeeList, ContainerProducts, Title } from "./styles"
 
 //object coffee
 
- export const coffees = [
+export const coffees = [
     {
         id: 1,
         product: 'Expresso Tradicional',

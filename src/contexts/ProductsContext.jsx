@@ -6,33 +6,49 @@ export const ProductsContext = createContext({ })
 export function ProductsContextProvider({children}){
 
     const [cartItem, setCartItem] = useState([])
+    const [productQuantities, setProductQuantities] = useState({})
 
-    const[quantity, setQuantity] = useState(1);
 
-    const handleSumProducts = (id) =>{
-            console.log(id)
-            setQuantity(quantity + 1)
+    const handleSumProducts = (id) => {
+        const item = coffees.find(coffee => coffee.id === id)
         
-    
+        if (item){
+            //CurrentQuantity recebe o estado com a ID do produto e atualiza o valor do estado
+            const currentQuantity = productQuantities[id] || 1;
+            setProductQuantities(prevQuantities => ({
+                ...prevQuantities,
+                [id]: currentQuantity + 1
+            }))
+
+            const existingCartItem = cartItem.find(cart => cart.item.id === item.id)
+
+            // Se item estiver no carinho, irá atualizar a quantidade do item no carrinho
+            if(existingCartItem){
+                existingCartItem.quantity = currentQuantity + 1;
+                setCartItem([...cartItem]); // Atualiza o carrinho
+            }
+        }
     }
 
-    const handleAddToCart = (id) =>{
-        const index = coffees.find(coffee => coffee.id == id)
-        const item = index
-        const newCartItem = [...cartItem, item]
-        setCartItem(newCartItem)
+    //adicione item selecionado ao array do carrinho
+    const handleAddToCart = (id, quantity) =>{
+        const item = coffees.find(coffee => coffee.id === id)
+        if(item) {
+            const newItem = {item, quantity}
+            setCartItem(prevCartItem => [...prevCartItem, newItem])
+        }
+        
     }
+
   
     return (
         <ProductsContext.Provider 
             value={{
-                coffees,
                 cartItem,
                 setCartItem,
                 handleAddToCart,
-                quantity,
-                setQuantity,
-                handleSumProducts
+                handleSumProducts,
+                productQuantities
             }}>
             {children}
         </ProductsContext.Provider>
