@@ -20,25 +20,10 @@ import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 export function ListProducts({content,value,image,category,subcategory,description,id}) {
     
-<<<<<<< HEAD
     const {handleAddToCart, handleSumProducts, productQuantities} = useContext(ProductsContext)
 
     const quantity = productQuantities[id] || 1
-=======
-    const {handleAddToCart, handleSumProducts, quantity, setQuantity} = useContext(ProductsContext)
-    
-    // const[quantity, setQuantity] = useState(1);
 
-    // function handleSumProducts(id){
-    //     setQuantity(quantity + 1); 
-    // } 
-
-    function handleMinusProducts(){
-        if (quantity > 1) {
-        setQuantity(quantity - 1);
-        }
-    }
->>>>>>> e776e72a27475bd724c8daa055da6c09ba838253
 
     return (
 
