@@ -1,4 +1,4 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { Minus, Plus, ShoppingCart } from "phosphor-react"
 import { 
         Categories,
@@ -20,7 +20,7 @@ import { ProductsContext } from "../../../../contexts/ProductsContext";
 
 export function ListProducts({content,value,image,category,subcategory,description,id}) {
     
-    const {handleAddToCart, handleSumProducts, productQuantities} = useContext(ProductsContext)
+    const {handleAddToCart, handleIncrementProduct, handleDecrementProduct, productQuantities} = useContext(ProductsContext)
 
     const quantity = productQuantities[id] || 1
 
@@ -57,13 +57,13 @@ export function ListProducts({content,value,image,category,subcategory,descripti
                                 color="#8047F8" 
                                 weight="bold" 
                                 cursor="pointer"
-                                /* onClick={handleMinusProducts} *//>
+                                onClick={() => handleDecrementProduct(id)}/>
                                 {quantity}
                             <Plus 
                                 color="#8047F8"
                                 weight="bold"
                                 cursor="pointer"
-                                onClick={() =>handleSumProducts(id)}
+                                onClick={() => handleIncrementProduct(id)}
                             />
                         </Counter>
 
