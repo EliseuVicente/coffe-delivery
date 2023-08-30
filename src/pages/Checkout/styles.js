@@ -1,16 +1,23 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    display: flex;
-    
-    flex-wrap: wrap;
-    margin-top: 5rem;
-    padding: 0rem 10rem;
+    display: inline;
+    width: 54rem;
+    float: left;
+    padding-left: 10rem;
+    gap: 12px;
 `
 export const ContainerForm = styled.div`
-    width: 40rem;
-    border-radius: 0.375rem;
+    /* width: 40rem; */
+    /* border-radius: 0.375rem; */
     background: ${props => props.theme['base-card']};
+
+    display: flex;
+    padding: 40px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 32px;
+    align-self: stretch;
     
 `
 export const FormAdress = styled.div`
@@ -74,7 +81,7 @@ export const LabelForm = styled.div`
 
 export const ContainerPayment = styled.div`
     padding: 2.5rem;
-    width: 40rem;       
+    /* width: 40rem; */       
     margin-top: 1rem;
     border-radius: 0.375rem;
     background: var(--base-card, #F3F2F2);
@@ -127,18 +134,12 @@ export const TypePayment = styled.div`
 `
 
 export const ContainerCart = styled.div`
-    display: flex;
+    display: inline;
     width: 28rem;
-    margin-top: 1rem;
-    margin-left: 10rem;
     padding: 2.5rem;
-    flex-direction: column;
-    align-items: flex-start;
+    float: right;
+    margin-right: 10rem;
     gap: 1.5rem;
     background: ${props => props.theme['base-card']};
-
-    @media (max-width: 1500px) {
-    margin-top: 2rem;
-    order: 3;
-    }
+    border-radius: 6px 44px;
 `

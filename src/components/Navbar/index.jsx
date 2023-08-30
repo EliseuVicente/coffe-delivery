@@ -1,5 +1,5 @@
 import { MapPin, ShoppingCart } from "phosphor-react"
-import { Action, IconCar, Navbar } from "./styles"
+import { Action, IconCar, Location, Navbar } from "./styles"
 import { Link } from "react-router-dom"
 import { useContext } from "react"
 import { ProductsContext } from "../../contexts/ProductsContext"
@@ -14,8 +14,11 @@ export function NavbarHeader(){
         </Link>
         
         <Action>
-            <MapPin size={23} color= "#4B2995"weight="fill" />
-                <div> Campinas, SP</div>
+            <Location>
+                <MapPin size={23} color= "#4B2995"weight="fill" />
+                    <p>Campinas, SP</p>
+            </Location>
+
             <IconCar>
                 <Link to={'/checkout'}>
                     <ShoppingCart size={23} color="#C47F17" weight="fill"/>

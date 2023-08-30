@@ -1,13 +1,13 @@
 import styled from 'styled-components'
+/* import img from '../../../../assets/divider.svg' */
 
 export const ItemsCart = styled.div`
     display: flex;
     margin-bottom: 3rem;
-    padding: 0.5rem 0.25rem;
     justify-content: space-between;
     align-items: flex-start;
     align-self: stretch;
-
+    margin-top: 2.5rem;
     background: ${props => props.theme['base-card']};
 `
 export const ImageProducts = styled.img`
@@ -20,7 +20,6 @@ export const ImageProducts = styled.img`
 export const DetailsItems = styled.div`
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
     gap: 0.5rem;
 `
 
@@ -49,8 +48,6 @@ export const ItemValue = styled.div`
         font-weight: 700;
         line-height: 130%; 
     }
-    
-
 `
 
 export const Action = styled.div`
@@ -94,4 +91,11 @@ export const TrashButton = styled.div`
 
         color: ${props => props.theme['base-text']};
     }
+`
+
+export const Divider = styled.div`
+display: flex;
+width: 100%;
+margin-top: 7rem;
+margin-left: -22rem;
 `

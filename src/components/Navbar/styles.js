@@ -2,28 +2,26 @@ import styled from "styled-components"
 
 export const Navbar = styled.header`
     display: flex;
-    flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 7rem;
-    gap: 2rem;
+    padding: 2rem 10rem;
 `
 
 export const Action = styled.div`
-    display: flexbox;
-    flex-direction: row;
-    justify-content: flex-end;
+    display: flex;
+    width: 11rem;
+`
+export const Location = styled.div`
+    display: flex;
     align-items: center;
     padding-left: 0.5rem;
-    gap: .31rem;
-
-    width: 8.938rem;
+    width: 8rem;
     height: 2.375rem;
-
+    gap: .31rem;
     background: ${props => props.theme['purple-light']};
     border-radius: 6px;
 
-    div{
+    p {
     font-family: 'Roboto';
     font-style: normal;
     font-weight: 400;
@@ -34,12 +32,13 @@ export const Action = styled.div`
  
     }
 `
+
 export const IconCar = styled.span`
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-left: 2rem;
+    margin-left: .5rem;
     width: 2.375rem;
     height: 2.375rem;
 

@@ -64,13 +64,13 @@ export function Checkout(){
         </ContainerPayment>
 
       </Container>
-
+    
       <ContainerCart>
       
         <Cart />
      
       </ContainerCart>
-      
+  
       </>
     )
 }
