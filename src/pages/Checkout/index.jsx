@@ -1,9 +1,22 @@
 import { FormAdress,LabelForm, ContainerForm, ContainerPayment, Container, AddresInput, StreetInput, ComplementInput, CityInput, UFInput, LabelPayment, TypePayment, ContainerCart} from "./styles"
 import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
 import { Cart } from "./components/Cart"
+import { useContext } from "react"
+import { ProductsContext } from "../../contexts/ProductsContext"
 
 export function Checkout(){
 
+const {cartItem} = useContext(ProductsContext)
+
+
+   const totalItens = cartItem.reduce((acc, item )=> {
+    const convertToNumber = parseFloat(item.valorSoma);
+    
+    return acc + convertToNumber
+  }, 0)
+ 
+  const formattedTotal = totalItens.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL'})
+  
   return (
 
       <>
@@ -68,6 +81,8 @@ export function Checkout(){
       <ContainerCart>
       
         <Cart />
+     <p>Total de itens {formattedTotal}</p>
+
      
       </ContainerCart>
   

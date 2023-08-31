@@ -24,9 +24,10 @@ export function ProductsContextProvider({children}){
             // Se item estiver no carinho, irá atualizar a quantidade do item no carrinho
             if(existingCartItem){
                 existingCartItem.quantity = currentQuantity + 1;
+                existingCartItem.valorSoma = ((item.value * currentQuantity) + Number(item.value)).toFixed(2);
                 setCartItem([...cartItem]); // Atualiza o carrinho
             }
-        }
+        } 
     }
 
     const handleDecrementProduct = (id) => {
@@ -45,6 +46,7 @@ export function ProductsContextProvider({children}){
             // Se item estiver no carinho, irá atualizar a quantidade do item no carrinho
             if(existingCartItem){
                 existingCartItem.quantity = currentQuantity - 1;
+                existingCartItem.valorSoma = ((item.value * currentQuantity) - Number(item.value)).toFixed(2);
                 setCartItem([...cartItem]); // Atualiza o carrinho
             }
         }
@@ -52,9 +54,30 @@ export function ProductsContextProvider({children}){
     //adicione item selecionado ao array do carrinho
     const handleAddToCart = (id, quantity) =>{
         const item = coffees.find(coffee => coffee.id === id)
+        
         if(item) {
-            const newItem = {item, quantity}
-            setCartItem(prevCartItem => [...prevCartItem, newItem])
+            const existingCartItem = cartItem.find(cart => cart.item.id === item.id)
+            
+            if(existingCartItem){
+                const updatedQuantity = quantity + 1;
+                existingCartItem.quantity = updatedQuantity;
+                existingCartItem.valorSoma = (item.value * updatedQuantity).toFixed(2);
+                setProductQuantities(prevQuantities => ({
+                    ...prevQuantities,
+                    [id]: updatedQuantity
+                }));
+
+                setCartItem([...cartItem]); // Atualiza o carrinho
+            } else {
+                const newTotal = (quantity * item.value).toFixed(2); // Formata para duas casas decimais
+                const newItem = { 
+                        item, 
+                        quantity, 
+                        valorSoma: newTotal
+                     };
+            setCartItem(prevCartItem => [...prevCartItem, newItem]);
+            }
+            
         }
     }
 

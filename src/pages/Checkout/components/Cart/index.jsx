@@ -20,7 +20,7 @@ export function Cart(){
                             <NameCoffes>{list.item.product}</NameCoffes>
 
                             <ItemValue>
-                                <p>{list.item.value}</p>
+                                <p>{list.valorSoma}</p>
                             </ItemValue>
 
                             <Action>
@@ -54,12 +54,12 @@ export function Cart(){
                             </Action>
                         </DetailsItems>
                         
-                       <Divider>
-                            <img src='divider.svg'></img>
-                       </Divider>
+                            <Divider>
+                                <img src='divider.svg'></img>
+                            </Divider>
                         
-                        </ItemsCart>
-                   
+                    </ItemsCart>
+
                 </>
                 )
             })} 
