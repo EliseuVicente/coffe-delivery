@@ -45,3 +45,28 @@ export const IconCar = styled.span`
     background: ${props => props.theme['yellow-light']};
     border-radius: 6px;
 `
+
+export const Counter = styled.div`
+    display: flex;
+    width: 20px;
+    height: 20px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-left: 20px;
+    margin-top: -40px;
+
+    p{
+        color: var(--base-white, #FFF);
+        text-align: center;
+
+        font-family: Roboto;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: -0.72px;
+    }
+
+    border-radius: 1000px;
+    background: var(--brand-yellow-dark, #C47F17);
+`
