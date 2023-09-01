@@ -1,15 +1,25 @@
 import styled from 'styled-components'
 
+export const TitleContainers = styled.div`
+    color: ${props => props.theme['base-subtitle']};
+    font-family: Baloo 2;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+    margin-bottom: 15px;
+`
+
 export const Container = styled.div`
     display: inline;
     width: 54rem;
     float: left;
     padding-left: 10rem;
+    margin-top: 2.5rem;
     gap: 12px;
 `
 export const ContainerForm = styled.div`
-    /* width: 40rem; */
-    /* border-radius: 0.375rem; */
+    border-radius: 0.375rem;
     background: ${props => props.theme['base-card']};
 
     display: flex;
@@ -35,24 +45,29 @@ const BaseInput = styled.input`
     border-radius: 0.25rem;
     border: 1px solid var(--base-button, #E6E5E5);
     background: var(--base-input, #EDEDED);
+
+    :focus{
+        border: 1px solid var(#C47F17);
+    }
 `
 
 export const AddresInput = styled(BaseInput)`
-    width: 12rem;
+    width: 12.5rem;
+
 `
 export const StreetInput = styled(BaseInput)`
     width: 100%;
 `
 export const ComplementInput = styled(BaseInput)`
-    width: 62.5%;
+    width: 20.5rem;
     margin-left: 1rem;
 `
 export const CityInput = styled(BaseInput)`
-    width: 50%;
+    width: 15.5rem;
     margin-left: 1rem;
 `
 export const UFInput = styled(BaseInput)`
-    width: 10%;
+    width: 3.95rem;
     margin-left: 1rem;
 `
 
@@ -80,11 +95,10 @@ export const LabelForm = styled.div`
 `
 
 export const ContainerPayment = styled.div`
-    padding: 2.5rem;
-    /* width: 40rem; */       
+    padding: 2.5rem;      
     margin-top: 1rem;
     border-radius: 0.375rem;
-    background: var(--base-card, #F3F2F2);
+    background: ${props=> props.theme['base-card']};
 `
 
 export const LabelPayment = styled.div`
@@ -117,7 +131,7 @@ export const TypePayment = styled.div`
     gap: 0.75rem;
     align-items: center;
     border-radius: 0.375rem;
-    background: var(--base-button, #E6E5E5);
+    background: ${props=> props.theme['base-button']};
 
     &:nth-child(4) {
         width: 10.6rem;
@@ -131,9 +145,24 @@ export const TypePayment = styled.div`
         line-height: 160%;
         text-transform: uppercase;
     }
+
+    :hover{
+        background: ${props=> props.theme['base-hover']};
+        transition: .6s;
+        cursor: pointer;
+    }
+
+    :selected{
+        border: 1px solid var(#8047F8);
+        background: ${props=> props.theme['purple-light']};
+    }
+`
+export const ContainerCart = styled.div`
+    float: right;
+    margin-top: 2.5rem;    
 `
 
-export const ContainerCart = styled.div`
+export const ContainerCartItems = styled.div`
     display: inline;
     width: 28rem;
     padding: 2.5rem;
@@ -142,4 +171,57 @@ export const ContainerCart = styled.div`
     gap: 1.5rem;
     background: ${props => props.theme['base-card']};
     border-radius: 6px 44px;
+`
+    export const FrameValues = styled.div`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-self: stretch;
+    margin-bottom: 12px;
+
+p {
+    color: ${props=> props.theme['base-text']};
+    font-family: Roboto;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 130%;
+}
+
+h1 {
+    color: var(--base-subtitle, #403937);
+    font-family: Roboto;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 130%;
+}
+`
+
+export const ButtonCart = styled.button`
+    display: flex;
+    width: 100%;
+    padding: 12px 8px;
+    justify-content: center;
+    align-items: center;
+    gap: 4px;
+    align-self: stretch;
+    border:none;
+
+    border-radius: 6px;
+    background: var(--brand-yellow, #DBAC2C);
+
+    color: var(--base-white, #FFF);
+    font-family: Roboto;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 160%; /* 22.4px */
+    text-transform: uppercase;
+
+    :hover {
+        background: var(--brand-yellow-dark, #C47F17);
+        transition: .6s;
+        cursor: pointer;
+    }
 `

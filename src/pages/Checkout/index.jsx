@@ -1,4 +1,21 @@
-import { FormAdress,LabelForm, ContainerForm, ContainerPayment, Container, AddresInput, StreetInput, ComplementInput, CityInput, UFInput, LabelPayment, TypePayment, ContainerCart} from "./styles"
+import { FormAdress,
+        LabelForm, 
+        ContainerForm, 
+        ContainerPayment, 
+        Container, 
+        AddresInput, 
+        StreetInput, 
+        ComplementInput, 
+        CityInput, UFInput, 
+        LabelPayment, 
+        TypePayment, 
+        ContainerCart,
+        ButtonCart, 
+        FrameValues,
+        TitleContainers,
+        ContainerCartItems
+      } from "./styles"
+
 import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
 import { Cart } from "./components/Cart"
 import { useContext } from "react"
@@ -17,75 +34,89 @@ const {cartItem} = useContext(ProductsContext)
  
   const formattedTotal = totalItens.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL'})
   
+  const frete = 3.5
+  const formattedFrete = frete.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL'})
+
+  const totalValueCart = (totalItens) + (frete)
+  const formatedTotalValueCart = totalValueCart.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL'})
+
   return (
 
       <>
-      <Container>
-        <ContainerForm>
-        <FormAdress>
-            <LabelForm>
-                <img src='\location.svg'/>
-                <h1>Endereço de Entrega</h1>
-                <span>Informe o endereço onde deseja receber seu pedido</span>
-            </LabelForm>
-              
-            <form action="">
-                <AddresInput type="text" placeholder="CEP" required/>
-                <StreetInput type="text" placeholder="Rua" required/>
-                <AddresInput type="text" placeholder="Número" required/>
-                <ComplementInput type="text" placeholder="Complemento"/>
-                <AddresInput type="text" placeholder="Bairro" required/>
-                <CityInput type="text" placeholder="Cidade" required/>
-                <UFInput type="text" placeholder="UF" required/>
-            </form>
-            </FormAdress>
-        </ContainerForm>
+        <Container>
+          <TitleContainers>Complete seu pedido</TitleContainers>
+            <ContainerForm>
+            <FormAdress>
+                <LabelForm>
+                    <img src='\location.svg'/>
+                    <h1>Endereço de Entrega</h1>
+                    <span>Informe o endereço onde deseja receber seu pedido</span>
+                </LabelForm>
+                  
+                <form action="">
+                    <AddresInput type="text" placeholder="CEP" required/>
+                    <StreetInput type="text" placeholder="Rua" required/>
+                    <AddresInput type="text" placeholder="Número" required/>
+                    <ComplementInput type="text" placeholder="Complemento"/>
+                    <AddresInput type="text" placeholder="Bairro" required/>
+                    <CityInput type="text" placeholder="Cidade" required/>
+                    <UFInput type="text" placeholder="UF" required/>
+                </form>
+                </FormAdress>
+            </ContainerForm>
 
-        <ContainerPayment>
-          <LabelPayment>
-                <CurrencyDollarSimple 
-                  color="#8047F8"
-                  size={22}
-                />
-                <h1>Pagamento</h1>
-                <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
-            </LabelPayment>
+            <ContainerPayment>
+              <LabelPayment>
+                    <CurrencyDollarSimple 
+                      color="#8047F8"
+                      size={22}
+                    />
+                    <h1>Pagamento</h1>
+                    <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
+                </LabelPayment>
 
-            <TypePayment>
-                <CreditCard 
-                  size={16}
-                  color="#8047F8"
+                <TypePayment>
+                    <CreditCard 
+                      size={16}
+                      color="#8047F8"
+                      />
+                    Cartão de crédito
+                  </TypePayment>
+
+                <TypePayment>
+                  <Bank
+                    size={16}
+                    color="#8047F8"
+                    />
+                    Cartão de débito
+                  </TypePayment>
+
+                <TypePayment>
+                  <Money 
+                    size={16}
+                    color="#8047F8"
                   />
-                Cartão de crédito
-              </TypePayment>
+                    Dinheiro
+                  </TypePayment>
+            </ContainerPayment>
 
-            <TypePayment>
-              <Bank
-                size={16}
-                color="#8047F8"
-                />
-                Cartão de débito
-              </TypePayment>
-
-            <TypePayment>
-              <Money 
-                size={16}
-                color="#8047F8"
-              />
-                Dinheiro
-              </TypePayment>
-        </ContainerPayment>
-
-      </Container>
-    
-      <ContainerCart>
+        </Container>
+       
+        <ContainerCart>
+          <TitleContainers>Cafés selecionados</TitleContainers>
+          
+          <ContainerCartItems>
       
-        <Cart />
-     <p>Total de itens {formattedTotal}</p>
+              <Cart />
 
+              <FrameValues><p>Total de itens </p><p>{formattedTotal}</p></FrameValues>
+              <FrameValues><p>Frete</p><p>{formattedFrete}</p></FrameValues>
+              <FrameValues><h1>Total</h1><h1>{formatedTotalValueCart}</h1></FrameValues>
+          
+              <ButtonCart>CONFIRMAR PEDIDO</ButtonCart>
      
+          </ContainerCartItems>
       </ContainerCart>
-  
       </>
     )
 }

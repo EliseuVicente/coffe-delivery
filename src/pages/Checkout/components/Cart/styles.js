@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-/* import img from '../../../../assets/divider.svg' */
 
 export const ItemsCart = styled.div`
     display: flex;
@@ -79,6 +78,8 @@ export const TrashButton = styled.div`
 
     :hover{
         cursor: pointer;
+        background: ${props => props.theme['base-hover']};
+        transition: .5s;
     }
     
     p{
@@ -92,10 +93,9 @@ export const TrashButton = styled.div`
         color: ${props => props.theme['base-text']};
     }
 `
-
-export const Divider = styled.div`
-display: flex;
-width: 100%;
-margin-top: 7rem;
-margin-left: -22rem;
+    export const Divider = styled.div`
+    display: flex;
+    width: 100%;
+    margin-top: 7rem;
+    margin-left: -22rem;
 `

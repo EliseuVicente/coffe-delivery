@@ -169,4 +169,9 @@ export const CarMarketing = styled.div`
 
     background: ${props => props.theme['purple-dark']};
     border-radius: 6px;
+
+    :hover{
+        background: ${props => props.theme['brand-purple']};
+        transition: .4s;
+    }
 `

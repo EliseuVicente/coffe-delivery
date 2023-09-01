@@ -23,7 +23,6 @@ export const TitleHeader = styled.div`
     width: 36.75rem;
     height: 12rem;
     left: 10%;
-    /* left: calc(50% - 36.75rem/2 - 16.625rem); */
     top: calc(50% - 192px/2 - 82px);
 `
 export const Title = styled.h1`
@@ -74,7 +73,6 @@ export const BoxCircle = styled.div`
         font-size: 16px;
         line-height: 130%;
         padding-left: 3rem;
-   
         color: #574F4D;
         margin-top: -1.5rem;
      }
