@@ -20,13 +20,16 @@ import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
 import { Cart } from "./components/Cart"
 import { useContext } from "react"
 import { ProductsContext } from "../../contexts/ProductsContext"
+import { useForm } from "react-hook-form"
 
 export function Checkout(){
 
 const {cartItem} = useContext(ProductsContext)
 
+const { register, handleSubmit} = useForm()
+const addForm = data => console.log(data)
 
-   const totalItens = cartItem.reduce((acc, item )=> {
+  const totalItens = cartItem.reduce((acc, item )=> {
     const convertToNumber = parseFloat(item.valorSoma);
     
     return acc + convertToNumber
@@ -53,15 +56,15 @@ const {cartItem} = useContext(ProductsContext)
                     <span>Informe o endereço onde deseja receber seu pedido</span>
                 </LabelForm>
                   
-                <form action="">
-                    <AddresInput type="text" placeholder="CEP" required/>
-                    <StreetInput type="text" placeholder="Rua" required/>
-                    <AddresInput type="text" placeholder="Número" required/>
-                    <ComplementInput type="text" placeholder="Complemento"/>
-                    <AddresInput type="text" placeholder="Bairro" required/>
-                    <CityInput type="text" placeholder="Cidade" required/>
-                    <UFInput type="text" placeholder="UF" required/>
-                </form>
+                <form>
+                    <AddresInput type="text" placeholder="CEP" {...register("cep")} required/>
+                    <StreetInput type="text" placeholder="Rua" {...register("street")} required/>
+                    <AddresInput type="text" placeholder="Número" {...register("number")} required/>
+                    <ComplementInput type="text" placeholder="Complemento" {...register("complement")}/>
+                    <AddresInput type="text" placeholder="Bairro" {...register("neighborhood")} required/>
+                    <CityInput type="text" placeholder="Cidade" {...register("city")} required/>
+                    <UFInput type="text" placeholder="UF" {...register("uf")} required/>
+                </form> 
                 </FormAdress>
             </ContainerForm>
 
@@ -99,24 +102,26 @@ const {cartItem} = useContext(ProductsContext)
                     Dinheiro
                   </TypePayment>
             </ContainerPayment>
-
+   
         </Container>
-       
+        
         <ContainerCart>
           <TitleContainers>Cafés selecionados</TitleContainers>
-          
+         
           <ContainerCartItems>
-      
+          
               <Cart />
-
+              
               <FrameValues><p>Total de itens </p><p>{formattedTotal}</p></FrameValues>
               <FrameValues><p>Frete</p><p>{formattedFrete}</p></FrameValues>
               <FrameValues><h1>Total</h1><h1>{formatedTotalValueCart}</h1></FrameValues>
-          
-              <ButtonCart>CONFIRMAR PEDIDO</ButtonCart>
-     
+              
+              <ButtonCart onClick={handleSubmit(addForm)}>CONFIRMAR PEDIDO</ButtonCart>
+              
           </ContainerCartItems>
+          
       </ContainerCart>
+      
       </>
     )
 }
