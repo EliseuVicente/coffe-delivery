@@ -131,8 +131,10 @@ export const TypePayment = styled.div`
     gap: 0.75rem;
     align-items: center;
     border-radius: 0.375rem;
-    background: ${props=> props.theme['base-button']};
-
+    background: ${ props => (props.isSelected ? props.theme['purple-light'] : props.theme['base-button'])};
+    border: 1px solid ${props => (props.isSelected ? props.theme['purple'] : props.theme['base-button'])};
+    /* background: ${props=> props.theme['base-button']}; */
+   
     &:nth-child(4) {
         width: 10.6rem;
         margin-right: 0rem;
@@ -151,15 +153,9 @@ export const TypePayment = styled.div`
         transition: .6s;
         cursor: pointer;
     }
-    :checked {
-        background: ${props=> props.theme['yellow-dark']};
-    }
+
 `
-export const ValueOption = styled.option`
-:checked {
-    background: ${props=> props.theme['yellow-dark']};
-}
-`
+
 export const ContainerCart = styled.div`
     float: right;
     margin-top: 2.5rem;    

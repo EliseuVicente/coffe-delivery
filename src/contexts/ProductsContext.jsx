@@ -8,6 +8,8 @@ export function ProductsContextProvider({children}){
     const [cartItem, setCartItem] = useState([])
     const [productQuantities, setProductQuantities] = useState({})
 
+    const [selectOption, setSelectOption] = useState(null);
+
     const handleIncrementProduct = (id) => {
 
         const item = coffees.find(coffee => coffee.id === id)
@@ -95,7 +97,9 @@ export function ProductsContextProvider({children}){
                 handleIncrementProduct,
                 handleDecrementProduct,
                 productQuantities,
-                handleDeleteToCart
+                handleDeleteToCart,
+                selectOption, 
+                setSelectOption
             }}>
             {children}
         </ProductsContext.Provider>
