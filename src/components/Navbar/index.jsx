@@ -22,9 +22,7 @@ export function NavbarHeader(){
             <IconCar>
                 <Link to={'/checkout'}>
                     <ShoppingCart size={23} color="#C47F17" weight="fill"/>
-                        <Counter><p>{cartItem.length}</p></Counter>
-                   
-                    
+                    {cartItem.length == 0 ? '' : <Counter><p>{cartItem.length}</p></Counter>}
                 </Link>
             </IconCar>
         </Action>

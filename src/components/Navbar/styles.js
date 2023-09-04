@@ -33,14 +33,12 @@ export const Location = styled.div`
     }
 `
 
-export const IconCar = styled.span`
+export const IconCar = styled.div`
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
     margin-left: .5rem;
-    width: 2.375rem;
     height: 2.375rem;
+    display: flex;
+    padding: 8px;
 
     background: ${props => props.theme['yellow-light']};
     border-radius: 6px;
