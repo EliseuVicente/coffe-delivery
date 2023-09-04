@@ -14,21 +14,31 @@ import { FormAdress,
         FrameValues,
         TitleContainers,
         ContainerCartItems,
-        ValueOption
       } from "./styles"
 
-import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
+import { Bank, CreditCard, CurrencyDollarSimple, Money, ShoppingCart} from 'phosphor-react'
 import { Cart } from "./components/Cart"
 import { useContext } from "react"
 import { ProductsContext } from "../../contexts/ProductsContext"
 import { useForm } from "react-hook-form"
+import { useNavigate } from "react-router-dom"
 
-export function Checkout(){
+export function  Checkout(){
 
-const {cartItem} = useContext(ProductsContext)
+const {cartItem, selectOption, setSelectOption} = useContext(ProductsContext)
 
 const { register, handleSubmit} = useForm()
-const addForm = data => console.log(data)
+
+
+const navigate = useNavigate();
+
+const addForm = (data) =>{
+  navigate("/success", { state: data})
+}
+
+const handleOptionClick = (option) => {
+  setSelectOption(option)
+}
 
   const totalItens = cartItem.reduce((acc, item )=> {
     const convertToNumber = parseFloat(item.valorSoma);
@@ -47,6 +57,7 @@ const addForm = data => console.log(data)
   return (
 
       <>
+
         <Container>
           <TitleContainers>Complete seu pedido</TitleContainers>
             <ContainerForm>
@@ -58,13 +69,13 @@ const addForm = data => console.log(data)
                 </LabelForm>
                   
                 <form>
-                    <AddresInput type="text" placeholder="CEP" {...register("cep")} required/>
-                    <StreetInput type="text" placeholder="Rua" {...register("street")} required/>
-                    <AddresInput type="text" placeholder="Número" {...register("number")} required/>
+                    <AddresInput type="text" placeholder="CEP" {...register("cep", {required:true})}/>
+                    <StreetInput type="text" placeholder="Rua" {...register("street", {required:true})}/>
+                    <AddresInput type="text" placeholder="Número" {...register("number", {required:true})}/>
                     <ComplementInput type="text" placeholder="Complemento" {...register("complement")}/>
-                    <AddresInput type="text" placeholder="Bairro" {...register("neighborhood")} required/>
-                    <CityInput type="text" placeholder="Cidade" {...register("city")} required/>
-                    <UFInput type="text" placeholder="UF" {...register("uf")} required/>
+                    <AddresInput type="text" placeholder="Bairro" {...register("neighborhood", {required:true})}/>
+                    <CityInput type="text" placeholder="Cidade" {...register("city", {required:true})}/>
+                    <UFInput type="text" placeholder="UF" {...register("uf", {required:true})}/>
                 </form> 
                 </FormAdress>
             </ContainerForm>
@@ -79,38 +90,39 @@ const addForm = data => console.log(data)
                     <span>O pagamento é feito na entrega. Escolha a forma que deseja pagar</span>
                 </LabelPayment>
 
-                <TypePayment>
+                <TypePayment 
+                  isSelected={selectOption === 'credito'}
+                  onClick={()=> handleOptionClick('credito')}>
                     <CreditCard 
                       size={16}
                       color="#8047F8"
                       />
-                      <ValueOption value="Cartão de crédito">
                         Cartão de crédito
-                      </ValueOption>
  
                   </TypePayment>
 
-                {/* <TypePayment value="Cartão de débito">
+                <TypePayment
+                isSelected={selectOption === 'debito'}
+                onClick={()=> handleOptionClick('debito')}>
                   <Bank
                     size={16}
                     color="#8047F8"
                     />
-                    <option value="Cartão de débito">
                       Cartão de débito
-                    </option>
                   </TypePayment>
 
-                <TypePayment value="Dinheiro">
+                <TypePayment
+                isSelected={selectOption === 'dinheiro'}
+                onClick={()=> handleOptionClick('dinheiro')}>
                   <Money 
                     size={16}
                     color="#8047F8"
                   />
-                  <option value="Dinheiro">
                     Dinheiro
-                  </option>
-                  </TypePayment> */}
+                  </TypePayment>
+                 
             </ContainerPayment>
-   
+            
         </Container>
         
         <ContainerCart>
@@ -124,8 +136,13 @@ const addForm = data => console.log(data)
               <FrameValues><p>Frete</p><p>{formattedFrete}</p></FrameValues>
               <FrameValues><h1>Total</h1><h1>{formatedTotalValueCart}</h1></FrameValues>
               
-              <ButtonCart onClick={handleSubmit(addForm)}>CONFIRMAR PEDIDO</ButtonCart>
-              
+              <ButtonCart 
+                onClick={handleSubmit(addForm)}>
+                  
+                  CONFIRMAR PEDIDO
+                 
+                </ButtonCart>
+
           </ContainerCartItems>
           
       </ContainerCart>
