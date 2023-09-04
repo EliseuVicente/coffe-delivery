@@ -151,11 +151,14 @@ export const TypePayment = styled.div`
         transition: .6s;
         cursor: pointer;
     }
-
-    :selected{
-        border: 1px solid var(#8047F8);
-        background: ${props=> props.theme['purple-light']};
+    :checked {
+        background: ${props=> props.theme['yellow-dark']};
     }
+`
+export const ValueOption = styled.option`
+:checked {
+    background: ${props=> props.theme['yellow-dark']};
+}
 `
 export const ContainerCart = styled.div`
     float: right;

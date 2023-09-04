@@ -13,7 +13,8 @@ import { FormAdress,
         ButtonCart, 
         FrameValues,
         TitleContainers,
-        ContainerCartItems
+        ContainerCartItems,
+        ValueOption
       } from "./styles"
 
 import { Bank, CreditCard, CurrencyDollarSimple, Money} from 'phosphor-react'
@@ -83,24 +84,31 @@ const addForm = data => console.log(data)
                       size={16}
                       color="#8047F8"
                       />
-                    Cartão de crédito
+                      <ValueOption value="Cartão de crédito">
+                        Cartão de crédito
+                      </ValueOption>
+ 
                   </TypePayment>
 
-                <TypePayment>
+                {/* <TypePayment value="Cartão de débito">
                   <Bank
                     size={16}
                     color="#8047F8"
                     />
-                    Cartão de débito
+                    <option value="Cartão de débito">
+                      Cartão de débito
+                    </option>
                   </TypePayment>
 
-                <TypePayment>
+                <TypePayment value="Dinheiro">
                   <Money 
                     size={16}
                     color="#8047F8"
                   />
+                  <option value="Dinheiro">
                     Dinheiro
-                  </TypePayment>
+                  </option>
+                  </TypePayment> */}
             </ContainerPayment>
    
         </Container>
