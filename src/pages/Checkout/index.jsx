@@ -25,7 +25,7 @@ import { useNavigate } from "react-router-dom"
 
 export function  Checkout(){
 
-  const {cartItem, selectOption, setSelectOption} = useContext(ProductsContext)
+  const {cartItem, setCartItem, selectOption, setSelectOption} = useContext(ProductsContext)
 
   const { register, handleSubmit} = useForm()
 
@@ -35,6 +35,7 @@ export function  Checkout(){
   /* Recebe os dados do formulário e envia para o caminho Success */
   const addForm = (data) =>{
     navigate("/success", { state: data})
+    setCartItem([])
   }
 
   /* Recebe a opção escolhida e altera o estado da div TypePayment */
