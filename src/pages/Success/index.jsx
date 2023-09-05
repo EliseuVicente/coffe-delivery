@@ -4,6 +4,7 @@ import { ProductsContext } from "../../contexts/ProductsContext"
 import { Container, ContainerInfo, H1, H2, Image, LabelInformation } from "./styles"
 import { CicleYellowDark, CirclePurple, CircleYellow } from "../Home/styles"
 import { MapPin, Timer, CurrencyDollarSimple } from "phosphor-react"
+
 import Illustration from "../../assets/illustration.svg"
 
 export function Success(){
