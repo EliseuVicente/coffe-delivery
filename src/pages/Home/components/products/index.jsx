@@ -1,6 +1,8 @@
 import { ListProducts } from "./listProducts"
 import { CoffeeList, ContainerProducts, Title } from "./styles"
 
+import Tradicional from "public/tradicional.svg"
+
 //object coffee
 
 export const coffees = [
@@ -11,7 +13,7 @@ export const coffees = [
         subcategory: '',
         description: 'O tradicional café feito com água quente e grãos moídos',
         value: '9.90',
-        image: 'public/tradicional.svg',
+        image: {Tradicional},
     },
     {
         id: 2,

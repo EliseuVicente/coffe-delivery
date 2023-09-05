@@ -1,7 +1,7 @@
 import { Coffee, Package, ShoppingCart, Timer } from "phosphor-react";
 import { BoxCircle, CicleYellowDark, CircleGray, CirclePurple, CircleYellow, Header, LabelItems, SubTitle, Title, TitleHeader} from "./styles";
 import { Products } from "./components/products"
-
+import Intro from "../../assets/intro.svg"
 
 export function Home(){
 
@@ -9,7 +9,7 @@ export function Home(){
        
          <div> 
             <Header>
-                <img src='.\src\assets\intro.svg'/>
+                <img src={Intro}/>
 
                 <TitleHeader>
                     <Title>Encontre o café perfeito para qualquer hora do dia</Title>
