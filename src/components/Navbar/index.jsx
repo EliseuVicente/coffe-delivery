@@ -27,6 +27,5 @@ export function NavbarHeader(){
             </IconCar>
         </Action>
     </Navbar>
-
    )
 }
