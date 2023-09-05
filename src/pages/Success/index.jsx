@@ -9,6 +9,8 @@ export function Success(){
 
 const {selectOption} = useContext(ProductsContext)
 
+/* Usando o location para receber os dados do formulário 
+enviados pelo Navegate state no Checkout */
 const location = useLocation()
 const formData = location.state
 

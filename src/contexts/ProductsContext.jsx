@@ -53,7 +53,7 @@ export function ProductsContextProvider({children}){
             }
         }
     }
-    //adicione item selecionado ao array do carrinho
+    //adiciona o item selecionado ao array do carrinho
     const handleAddToCart = (id, quantity) =>{
         const item = coffees.find(coffee => coffee.id === id)
         
@@ -83,6 +83,7 @@ export function ProductsContextProvider({children}){
         }
     }
 
+    //remove o item selecionado do carrinho
     const handleDeleteToCart = (id) => {
         const itemDelete = cartItem.filter(cart => cart.item.id !== id)
         setCartItem(itemDelete)

@@ -181,7 +181,6 @@ export const TypePayment = styled.div`
     border-radius: 0.375rem;
     background: ${ props => (props.isSelected ? props.theme['purple-light'] : props.theme['base-button'])};
     border: 1px solid ${props => (props.isSelected ? props.theme['purple'] : props.theme['base-button'])};
-    /* background: ${props=> props.theme['base-button']}; */
    
     &:nth-child(4) {
         width: 10.6rem;
@@ -284,7 +283,7 @@ export const ButtonCart = styled.button`
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
-    line-height: 160%; /* 22.4px */
+    line-height: 160%;
     text-transform: uppercase;
 
     :hover {

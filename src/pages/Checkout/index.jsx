@@ -25,27 +25,31 @@ import { useNavigate } from "react-router-dom"
 
 export function  Checkout(){
 
-const {cartItem, selectOption, setSelectOption} = useContext(ProductsContext)
+  const {cartItem, selectOption, setSelectOption} = useContext(ProductsContext)
 
-const { register, handleSubmit} = useForm()
+  const { register, handleSubmit} = useForm()
 
+  /* Recebe o Hook Navegate */
+  const navigate = useNavigate();
 
-const navigate = useNavigate();
+  /* Recebe os dados do formulário e envia para o caminho Success */
+  const addForm = (data) =>{
+    navigate("/success", { state: data})
+  }
 
-const addForm = (data) =>{
-  navigate("/success", { state: data})
-}
+  /* Recebe a opção escolhida e altera o estado da div TypePayment */
+  const handleOptionClick = (option) => {
+    setSelectOption(option)
+  }
 
-const handleOptionClick = (option) => {
-  setSelectOption(option)
-}
-
+  /* Soma o valor dos produtos no carrinho */
   const totalItens = cartItem.reduce((acc, item )=> {
     const convertToNumber = parseFloat(item.valorSoma);
     
     return acc + convertToNumber
   }, 0)
  
+  /* Bloco de cálculo dos valores e conversão para moeda */
   const formattedTotal = totalItens.toLocaleString('pr-BR', { style: 'currency', currency: 'BRL'})
   
   const frete = 3.5

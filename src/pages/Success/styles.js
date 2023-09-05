@@ -18,7 +18,7 @@ export const H2 = styled.h2`
     font-size: 20px;
     font-style: normal;
     font-weight: 400;
-    line-height: 130%; /* 26px */
+    line-height: 130%;
 `
 export const Container = styled.div`
     display: flex;
