@@ -46,7 +46,9 @@ return(
 
         </ContainerInfo>
         
-        <Imagem src={Imageillustration}/>
+        <Imagem>
+            <img src={Imageillustration}/>
+        </Imagem>
         </Container>
     </>
     )

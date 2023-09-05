@@ -62,7 +62,7 @@ export const ContainerInfo = styled.div`
       }
 `
 
-export const Imagem = styled.img`
+export const Imagem = styled.div`
     width: 492px;
     height: 293px;
     flex-shrink: 0;
