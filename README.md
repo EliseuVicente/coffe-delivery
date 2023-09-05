@@ -17,7 +17,7 @@ Quero aprender a cada dia mais, fique a vontade para acessar o link do APP publi
 
 LINK: https://master.d2qksk9lhdz8jx.amplifyapp.com/
 
-# Rodar o porjeto localmente
+# Rodar o projeto localmente
 
   Para rodar rodar o projeto você precisará necessário somente o básico. Instalado o NPM na máquina local, basta inserir o comando npm i no terminal do projeto para instalar as dependências necessárias.
 
