@@ -8,6 +8,10 @@ export const ItemsCart = styled.div`
     align-self: stretch;
     margin-top: 2.5rem;
     background: ${props => props.theme['base-card']};
+
+    @media (max-width: 574px) {
+        margin-top: 0rem;
+      }
 `
 export const ImageProducts = styled.img`
     position: absolute;
@@ -15,11 +19,19 @@ export const ImageProducts = styled.img`
     height: 4rem;
     justify-content: center;
     align-items: center; 
+
+    @media (max-width: 574px) {
+        margin-top: 1rem;
+      }
 `
 export const DetailsItems = styled.div`
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
+
+    @media (max-width: 574px) {
+        margin-top: 1rem;
+      }
 `
 
 export const NameCoffes = styled.p`
@@ -47,6 +59,10 @@ export const ItemValue = styled.div`
         font-weight: 700;
         line-height: 130%; 
     }
+
+    @media (max-width: 574px) {
+        padding-left: 18rem;
+      }
 `
 
 export const Action = styled.div`

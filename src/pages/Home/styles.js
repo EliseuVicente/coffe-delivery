@@ -13,6 +13,10 @@ export const Header = styled.div`
         height: 360px;
         left: calc(50% - 476px/2 + 322px);
         top: calc(50% - 360px/2);
+
+        @media (max-width: 574px) {
+            display: none;
+          }
     }
 `
 export const TitleHeader = styled.div`
@@ -24,6 +28,12 @@ export const TitleHeader = styled.div`
     height: 12rem;
     left: 10%;
     top: calc(50% - 192px/2 - 82px);
+
+    @media (max-width: 574px) {
+        width: 100vw;
+        left: 0%;
+        padding-left: 1rem;
+      }
 `
 export const Title = styled.h1`
     width: 36.75rem;
@@ -39,6 +49,11 @@ export const Title = styled.h1`
     order: 0;
     align-self: stretch;
     flex-grow: 0;
+
+    @media (max-width: 574px) {
+        width: 90vw;
+        font-size: 34px;
+      }
 `
 
 export const SubTitle = styled.h2`
@@ -51,6 +66,11 @@ export const SubTitle = styled.h2`
 
     color: ${props => props.theme['base-subtitle']};
     font-stretch: 100;
+
+    @media (max-width: 574px) {
+        width: 90vw;
+        margin-top: 2rem;
+      }
 `
 
 export const BoxCircle = styled.div`
@@ -58,6 +78,11 @@ export const BoxCircle = styled.div`
     margin-top: 10rem;
     
     margin-left: 10%;
+
+    @media (max-width: 574px) {
+        width: 90vw;
+        margin-left: 1rem;
+      }
 `
  export const LabelItems = styled.div`
     display: inline-grid;
@@ -76,6 +101,12 @@ export const BoxCircle = styled.div`
         color: #574F4D;
         margin-top: -1.5rem;
      }
+
+     @media (max-width: 574px) {
+        width: 90vw;
+        margin-left: 1rem;
+        position: relative;
+      }
  `
 
 const CicleBase = styled.div`

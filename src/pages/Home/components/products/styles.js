@@ -5,6 +5,10 @@ export const ContainerProducts = styled.div`
     position: relative;
     height: 102.813rem;
     top: 34.5rem;
+
+    @media (max-width: 574px) {
+        width: 100vw;
+      }
 `
 
 export const Title = styled.h1`
@@ -22,12 +26,21 @@ export const Title = styled.h1`
     line-height: 130%;
 
     color: ${props => props.theme['base-subtitle']};
+
+    @media (max-width: 574px) {
+        display: flex;
+        width: 80vw;
+      }
 `
 export const CoffeeList = styled.div`
     position: relative;
     max-width: 80rem;
     top: 3rem;
     left: 10%;
+
+    @media (max-width: 574px) {
+        width: 80vw;
+      }
 `
 
 export const CoffeeItems = styled.div`

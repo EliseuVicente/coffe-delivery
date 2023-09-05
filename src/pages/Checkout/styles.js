@@ -17,6 +17,12 @@ export const Container = styled.div`
     padding-left: 10rem;
     margin-top: 2.5rem;
     gap: 12px;
+
+    @media (max-width: 574px) {
+        float: ;
+        padding: 1rem;
+        width: 100vw;
+      }
 `
 export const ContainerForm = styled.div`
     border-radius: 0.375rem;
@@ -28,6 +34,10 @@ export const ContainerForm = styled.div`
     align-items: flex-start;
     gap: 32px;
     align-self: stretch;
+
+    @media (max-width: 574px) {
+        padding: 0px;
+      }
     
 `
 export const FormAdress = styled.div`
@@ -36,6 +46,10 @@ export const FormAdress = styled.div`
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+
+    @media (max-width: 574px) {
+        padding: .5rem;
+      }
 
 `
 const BaseInput = styled.input`
@@ -54,21 +68,46 @@ const BaseInput = styled.input`
 export const AddresInput = styled(BaseInput)`
     width: 12.5rem;
 
+    @media (max-width: 574px) {
+        width: 80%;
+        margin-left: 2rem;
+      }
+
 `
 export const StreetInput = styled(BaseInput)`
     width: 100%;
+
+    @media (max-width: 574px) {
+        width: 80%;
+        margin-left: 2rem;
+      }
 `
 export const ComplementInput = styled(BaseInput)`
     width: 20.5rem;
     margin-left: 1rem;
+
+    @media (max-width: 574px) {
+        width: 80%;
+        margin-left: 2rem;
+      }
 `
 export const CityInput = styled(BaseInput)`
     width: 15.5rem;
     margin-left: 1rem;
+
+    @media (max-width: 574px) {
+        width: 80%;
+        margin-left: 2rem;
+      }
 `
 export const UFInput = styled(BaseInput)`
     width: 3.95rem;
     margin-left: 1rem;
+
+    @media (max-width: 574px) {
+        width: 30%;
+        margin-left: 2rem;
+      }
 `
 
 export const LabelForm = styled.div`
@@ -82,6 +121,10 @@ export const LabelForm = styled.div`
         font-size: 1rem;
         font-weight: 400;
         line-height: 130%;
+
+        @media (max-width: 574px) {
+            width: 20rem;
+          }
     }
 
     span {
@@ -91,6 +134,11 @@ export const LabelForm = styled.div`
         font-size: 0.875rem;
         font-weight: 400;
         line-height: 130%;  
+
+
+        @media (max-width: 574px) {
+            margin-left: -20rem;
+          }
     }
 `
 
@@ -154,11 +202,21 @@ export const TypePayment = styled.div`
         cursor: pointer;
     }
 
+    @media (max-width: 574px) {
+        margin-right: 0rem;
+      }
+
 `
 
 export const ContainerCart = styled.div`
     float: right;
-    margin-top: 2.5rem;    
+    margin-top: 2.5rem;  
+    
+    @media (max-width: 574px) {
+        margin-top: 1rem;  
+        float: none;
+        padding: 1rem;
+      }
 `
 
 export const ContainerCartItems = styled.div`
@@ -170,6 +228,13 @@ export const ContainerCartItems = styled.div`
     gap: 1.5rem;
     background: ${props => props.theme['base-card']};
     border-radius: 6px 44px;
+
+    @media (max-width: 574px) {
+        padding: 0rem;
+        width: 100vw;
+        float: none;
+        margin-right: 0rem;
+      }
 `
     export const FrameValues = styled.div`
     display: flex;
@@ -195,6 +260,10 @@ h1 {
     font-weight: 700;
     line-height: 130%;
 }
+@media (max-width: 574px) {
+    width: 90vw;
+  }
+
 `
 
 export const ButtonCart = styled.button`
@@ -223,4 +292,5 @@ export const ButtonCart = styled.button`
         transition: .6s;
         cursor: pointer;
     }
+
 `

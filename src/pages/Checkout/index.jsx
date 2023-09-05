@@ -91,8 +91,8 @@ const handleOptionClick = (option) => {
                 </LabelPayment>
 
                 <TypePayment 
-                  isSelected={selectOption === 'credito'}
-                  onClick={()=> handleOptionClick('credito')}>
+                  isSelected={selectOption === 'Cartão de crédito'}
+                  onClick={()=> handleOptionClick('Cartão de crédito')}>
                     <CreditCard 
                       size={16}
                       color="#8047F8"
@@ -102,8 +102,8 @@ const handleOptionClick = (option) => {
                   </TypePayment>
 
                 <TypePayment
-                isSelected={selectOption === 'debito'}
-                onClick={()=> handleOptionClick('debito')}>
+                isSelected={selectOption === 'Cartão de débito'}
+                onClick={()=> handleOptionClick('Cartão de débito')}>
                   <Bank
                     size={16}
                     color="#8047F8"
@@ -112,8 +112,8 @@ const handleOptionClick = (option) => {
                   </TypePayment>
 
                 <TypePayment
-                isSelected={selectOption === 'dinheiro'}
-                onClick={()=> handleOptionClick('dinheiro')}>
+                isSelected={selectOption === 'Dinheiro'}
+                onClick={()=> handleOptionClick('Dinheiro')}>
                   <Money 
                     size={16}
                     color="#8047F8"

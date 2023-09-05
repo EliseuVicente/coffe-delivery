@@ -5,6 +5,10 @@ export const Navbar = styled.header`
     justify-content: space-between;
     align-items: center;
     padding: 2rem 10rem;
+
+    @media (max-width: 574px) {
+        padding: 2rem;
+      }
 `
 
 export const Action = styled.div`
