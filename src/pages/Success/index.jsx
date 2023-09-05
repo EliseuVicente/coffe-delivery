@@ -1,11 +1,11 @@
 import { useContext } from "react"
 import { useLocation } from "react-router-dom"
 import { ProductsContext } from "../../contexts/ProductsContext"
-import { Container, ContainerInfo, H1, H2, Image, LabelInformation } from "./styles"
+import { Container, ContainerInfo, H1, H2, Imagem, LabelInformation } from "./styles"
 import { CicleYellowDark, CirclePurple, CircleYellow } from "../Home/styles"
 import { MapPin, Timer, CurrencyDollarSimple } from "phosphor-react"
 
-// import Illustration from "../../assets/illustration.svg"
+import Imageillustration from "../../assets/illustration.svg"
 
 export function Success(){
 
@@ -46,7 +46,7 @@ return(
 
         </ContainerInfo>
         
-        {/* <Image src={Illustration}/> */}
+        <Imagem src={Imageillustration}/>
         </Container>
     </>
     )
