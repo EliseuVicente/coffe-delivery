@@ -5,7 +5,7 @@ import { Container, ContainerInfo, H1, H2, Image, LabelInformation } from "./sty
 import { CicleYellowDark, CirclePurple, CircleYellow } from "../Home/styles"
 import { MapPin, Timer, CurrencyDollarSimple } from "phosphor-react"
 
-import Illustration from "../../assets/illustration.svg"
+// import Illustration from "../../assets/illustration.svg"
 
 export function Success(){
 
@@ -46,7 +46,7 @@ return(
 
         </ContainerInfo>
         
-        <Image src={Illustration}/>
+        {/* <Image src={Illustration}/> */}
         </Container>
     </>
     )
