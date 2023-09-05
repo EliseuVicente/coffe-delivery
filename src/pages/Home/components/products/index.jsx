@@ -13,7 +13,7 @@ export const coffees = [
         subcategory: '',
         description: 'O tradicional café feito com água quente e grãos moídos',
         value: '9.90',
-        image: {Tradicional},
+        image: Tradicional,
     },
     {
         id: 2,
