@@ -5,7 +5,7 @@ import { Container, ContainerInfo, H1, H2, Imagem, LabelInformation } from "./st
 import { CicleYellowDark, CirclePurple, CircleYellow } from "../Home/styles"
 import { MapPin, Timer, CurrencyDollarSimple } from "phosphor-react"
 
-import Illustration from "../../../src/assets/illustration.svg"
+import Illustration from "../../../public/illustration.svg"
 
 export function Success(){
 
