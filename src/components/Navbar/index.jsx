@@ -10,7 +10,7 @@ export function NavbarHeader(){
    return (
     <Navbar>
         <Link to={'/'}>
-            <img src='.\src\assets\logo.svg'/>
+            <img src='\src\assets\logo.svg'/>
         </Link>
         
         <Action>
