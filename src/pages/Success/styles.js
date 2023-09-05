@@ -9,6 +9,11 @@ export const H1 = styled.h1`
     font-style: normal;
     font-weight: 800;
     line-height: 130%;
+
+    @media (max-width: 574px) {
+        padding-left: 1rem;
+        font-size: 28px;
+      }
 `
 
 export const H2 = styled.h2`
@@ -19,13 +24,27 @@ export const H2 = styled.h2`
     font-style: normal;
     font-weight: 400;
     line-height: 130%;
+
+    @media (max-width: 574px) {
+        width: 21rem;
+        margin-top: .5rem;
+        padding-left: 1rem;
+        font-size: 16px;
+      }
 `
 export const Container = styled.div`
     display: flex;
     margin-top: 40px;
     padding-left: 10rem;
-    gap: 102px
+    gap: 102px;
+    
+    @media(max-width: 574px) {
+        padding-left: 1rem;
+        display: block;
+      }
+   
 `
+
 export const ContainerInfo = styled.div`
     display: flex;
     margin-top: 40px;
@@ -37,12 +56,21 @@ export const ContainerInfo = styled.div`
 
     border-radius: 6px 36px;
     border: 1px solid #DBAC2C;
+
+    @media(max-width: 574px) {
+        width: 95%;
+      }
 `
 
 export const Image = styled.img`
     width: 492px;
     height: 293px;
     flex-shrink: 0;
+
+    @media(max-width: 574px) {
+        width: 22rem;
+        height: 20rem;
+      }
 `
 export const LabelInformation = styled.div`
     display: flex;
@@ -63,6 +91,11 @@ export const LabelInformation = styled.div`
         font-style: normal;
         font-weight: 700;
         }
+
+        @media(max-width: 574px) {
+        width: 15rem;
+       
+      }
     }
 
     
