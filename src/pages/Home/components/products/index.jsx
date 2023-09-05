@@ -1,7 +1,7 @@
 import { ListProducts } from "./listProducts"
 import { CoffeeList, ContainerProducts, Title } from "./styles"
 
-import Tradicional from "public/tradicional.svg"
+import Tradicional from "../../../../../public/tradicional.svg"
 
 //object coffee
 
